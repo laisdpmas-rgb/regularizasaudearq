@@ -85,6 +85,7 @@ body{background:var(--color-paper)}
 
 /* services: index, no cards */
 .service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap-columns);border-top:1px solid var(--color-ink)}
+.service:last-child:nth-child(odd){grid-column:1/-1}
 .service{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-sm);padding:var(--space-lg) 0 var(--space-md);border-bottom:var(--rule-hair) solid var(--color-rule)}
 .service h3{font-size:var(--text-2xl);line-height:1.12;max-width:20ch}
 .service p{color:var(--color-ink-2);max-width:44ch}
@@ -109,7 +110,7 @@ body{background:var(--color-paper)}
 
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--gap-columns);align-items:center}
-.about-card{display:grid;place-items:center;min-height:440px;padding:var(--space-lg);background:var(--color-paper-2);color:var(--color-muted);text-align:center;font-size:var(--text-sm);outline:var(--rule-hair) solid var(--color-rule);outline-offset:-14px}
+.about-card{display:grid;place-items:center;min-height:260px;padding:var(--space-lg);background:var(--color-paper-2);color:var(--color-muted);text-align:center;font-size:var(--text-sm);outline:var(--rule-hair) solid var(--color-rule);outline-offset:-14px}
 .about-card strong{display:block;margin-bottom:var(--space-xs);font-family:var(--font-display);font-weight:500;font-size:var(--text-xl);color:var(--color-ink)}
 .about-copy h2{max-width:20ch}
 .about-copy p{margin-top:var(--space-md);color:var(--color-ink-2);max-width:56ch}
@@ -201,7 +202,7 @@ body{background:var(--color-paper)}
   .problem,.step{grid-template-columns:minmax(0,1fr);gap:var(--space-xs)}
   .hero-actions .btn{width:100%}
   .form{padding:var(--space-lg) var(--space-md)}
-  .about-card{min-height:300px}
+  .about-card{min-height:200px}
   .floating-cta{display:flex;position:fixed;z-index:var(--z-sticky);left:var(--space-sm);right:var(--space-sm);bottom:var(--space-sm);box-shadow:0 8px 24px var(--color-shade)}
   body{padding-bottom:84px}
 }
