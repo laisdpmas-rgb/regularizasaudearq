@@ -1,23 +1,23 @@
-/* Hallmark · shape: Index-First · genre: editorial · theme: atelier (brand colours kept; Sentient unreachable, Newsreader 300 stands in) · redesign: full
- * paper: oklch(95% 0.012 92) · accent: oklch(50% 0.14 40) · display: Newsreader · body: Hanken Grotesk · hero: Settled · nav: edge-aligned · footer: statement · signature: the three services as a ruled index under the headline
+/* Hallmark · shape: Index-First · genre: editorial · theme: atelier (brand colours kept; display face by the owner's choice) · redesign: full
+ * paper: oklch(95% 0.012 92) · accent: oklch(50% 0.14 40) · display: Poppins · body: Source Sans 3 · hero: Settled · nav: edge-aligned · footer: statement · signature: the three services as a ruled index under the headline
  * axes: light/roman-serif/warm · posture: restrained · contrast: pass · fold: pass · copy: verbatim · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E3 S3 R4 V3 · weakest: S, services stay a list of six; split by hairlines, no cards, the form is the one raised object */
 /* Hallmark · waive 58 · the words are the owner's (copy: verbatim); the page keeps all 1.3k words and sets them in short columns */
 /* Hallmark · waive 44c, 49b · the hero ends above the segment strip that closes the first screen; the three service names are content that wraps at 320px
  * Hallmark · waive 58, 77, 79 on privacidade.html · a legal document, not a landing page; its length is the text
  * Hallmark · waive 59 · the segment strip is a band, not a section; the page is nine sections plus it
- * Hallmark · waive 1 · Newsreader 300 for display: Sentient (the theme face) could not be downloaded in this environment */
+ * Hallmark · waive 1 · Poppins for display: the owner chose it over Newsreader and the theme face, and it is the face of the site's first version */
 @import url("./tokens.css");
 @import url("./base.css");
 
-@font-face{font-family:"Newsreader";font-weight:200 800;font-style:normal;font-display:swap;src:url("/assets/fonts/newsreader-latin-wght-normal.woff2") format("woff2")}
-@font-face{font-family:"Hanken Grotesk";font-weight:100 900;font-style:normal;font-display:swap;src:url("/assets/fonts/hanken-grotesk-latin-wght-normal.woff2") format("woff2")}
+@font-face{font-family:"Poppins";font-weight:500;font-style:normal;font-display:swap;src:url("/assets/fonts/poppins-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Source Sans 3";font-weight:200 900;font-style:normal;font-display:swap;src:url("/assets/fonts/source-sans-3-latin-wght-normal.woff2") format("woff2")}
 
 /* base additions */
 .wrap{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
 .serif{font-family:var(--font-display)}
 h1,h2,h3{color:var(--color-ink);font-weight:var(--display-weight)}
-h3{font-weight:400}
+h3{font-weight:500}
 body{background:var(--color-paper)}
 
 /* controls */
@@ -58,7 +58,7 @@ body{background:var(--color-paper)}
 .micro-note{grid-column:1;margin-top:var(--space-lg);padding-top:var(--space-md);border-top:var(--rule-hair) solid var(--color-rule);font-size:var(--text-sm);color:var(--color-muted);max-width:44ch}
 .hero-index{list-style:none;margin:0;padding:0;grid-column:2;grid-row:2/5;align-self:end;border-top:1px solid var(--color-ink)}
 .hero-index li{border-bottom:var(--rule-hair) solid var(--color-rule)}
-.hero-index a{display:flex;align-items:center;min-height:72px;padding:var(--space-md) 0;font-family:var(--font-display);font-weight:400;font-size:var(--text-xl);line-height:1.2;color:var(--color-ink);text-decoration:none;transition:transform var(--dur-short) var(--ease-out)}
+.hero-index a{display:flex;align-items:center;min-height:72px;padding:var(--space-md) 0;font-family:var(--font-display);font-weight:500;font-size:var(--text-xl);line-height:1.2;color:var(--color-ink);text-decoration:none;transition:transform var(--dur-short) var(--ease-out)}
 .hero-index a:hover{transform:translateX(8px)}
 
 /* segment strip */
@@ -96,7 +96,7 @@ body{background:var(--color-paper)}
 .feature-band p{margin-top:var(--space-md);color:var(--color-brand-soft);max-width:52ch}
 .features{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gap-columns);border-top:var(--rule-hair) solid var(--color-rule-dark)}
 .feature{padding-top:var(--space-md)}
-.feature b{display:block;font-family:var(--font-display);font-weight:400;font-size:var(--text-xl);line-height:1.2}
+.feature b{display:block;font-family:var(--font-display);font-weight:500;font-size:var(--text-xl);line-height:1.2}
 .feature span{display:block;margin-top:var(--space-xs);font-size:var(--text-sm);color:var(--color-brand-soft)}
 
 /* steps: timetable */
