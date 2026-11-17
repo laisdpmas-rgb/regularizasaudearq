@@ -49,7 +49,7 @@ body{background:var(--color-paper)}
 /* hero: settled */
 .hero{display:flex;align-items:center;min-height:calc(100svh - 133px);padding:var(--space-3xl) 0 var(--space-2xl)}
 .hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:var(--gap-columns)}
-.hero h1{max-width:18ch;font-size:var(--text-display);line-height:1.03}
+.hero h1{max-width:24ch;font-size:clamp(2rem,2.4vw + 1rem,3.5rem);line-height:1.06}
 .h1-line{display:block;margin-top:var(--space-md);font-size:.62em;line-height:1.12;color:var(--color-ink-2)}
 .hero-grid>div{display:contents}
 .hero-grid h1{grid-column:1/-1}
@@ -109,7 +109,8 @@ body{background:var(--color-paper)}
 
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--gap-columns);align-items:center}
-.portrait-placeholder{display:grid;place-items:center;min-height:440px;padding:var(--space-lg);background:var(--color-paper-2);color:var(--color-muted);text-align:center;font-size:var(--text-sm);outline:var(--rule-hair) solid var(--color-rule);outline-offset:-14px}
+.about-card{display:grid;place-items:center;min-height:440px;padding:var(--space-lg);background:var(--color-paper-2);color:var(--color-muted);text-align:center;font-size:var(--text-sm);outline:var(--rule-hair) solid var(--color-rule);outline-offset:-14px}
+.about-card strong{display:block;margin-bottom:var(--space-xs);font-family:var(--font-display);font-weight:500;font-size:var(--text-xl);color:var(--color-ink)}
 .about-copy h2{max-width:20ch}
 .about-copy p{margin-top:var(--space-md);color:var(--color-ink-2);max-width:56ch}
 .pending-note{padding-top:var(--space-md);border-top:var(--rule-hair) solid var(--color-rule);font-size:var(--text-sm);color:var(--color-muted)}
@@ -200,7 +201,7 @@ body{background:var(--color-paper)}
   .problem,.step{grid-template-columns:minmax(0,1fr);gap:var(--space-xs)}
   .hero-actions .btn{width:100%}
   .form{padding:var(--space-lg) var(--space-md)}
-  .portrait-placeholder{min-height:300px}
+  .about-card{min-height:300px}
   .floating-cta{display:flex;position:fixed;z-index:var(--z-sticky);left:var(--space-sm);right:var(--space-sm);bottom:var(--space-sm);box-shadow:0 8px 24px var(--color-shade)}
   body{padding-bottom:84px}
 }
