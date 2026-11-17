@@ -32,7 +32,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .eyebrow{font-family:var(--head);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--rs-mid)}
-.serif,h1,h2,h3{font-family:var(--head);font-weight:500;letter-spacing:-.02em;color:var(--rs-ink)}
+.serif,h1,h2,h3{font-family:var(--head);font-weight:500;letter-spacing:-.02em;color:var(--rs-ink);overflow-wrap:break-word}
 
 /* 3 — COMPONENTES ------------------------------------------------------- */
 /* Marca */
@@ -45,6 +45,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;border-radius:2px;padding:13px 20px;text-decoration:none;font-family:var(--head);font-size:.84rem;font-weight:500;letter-spacing:.01em;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s}
 .btn:hover{transform:translateY(-1px)}
 .btn,.navlinks a{white-space:nowrap}
+@media(max-width:480px){.btn,.navlinks a{white-space:normal;text-align:center}}
 .navlinks .mobile-cta{display:none}
 .btn-primary{background:var(--rs-ink);color:var(--rs-paper);border-color:var(--rs-ink)}
 .btn-primary:hover{background:var(--rs-mid);border-color:var(--rs-mid)}
@@ -163,6 +164,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .field.full{grid-column:1/-1}
 .field label{font-size:.88rem;font-weight:600}
 .field input,.field select,.field textarea{border:1px solid var(--rs-mid);background:var(--rs-paper);border-radius:2px;padding:12px;color:var(--rs-ink);width:100%;min-height:46px}
+input[type=checkbox]{width:24px;height:24px;min-height:24px;flex:none;accent-color:var(--rs-ink)}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--rs-ink)}
 .field textarea{min-height:95px;resize:vertical}
 .field input::placeholder,.field textarea::placeholder{color:var(--rs-mid)}
@@ -180,6 +182,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
 .footer p{color:var(--rs-stone);font-size:.9rem;max-width:340px}
 .footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a,.footer-bottom a{display:inline-block;padding:6px 0}
 .footer-links a{font-size:.9rem;color:var(--rs-sand);text-decoration:none;transition:color .2s}
 .footer-links a:hover,.footer-bottom a:hover{color:var(--rs-paper)}
 .footer-bottom{border-top:1px solid rgba(189,181,163,.35);margin-top:28px;padding-top:17px;display:flex;justify-content:space-between;gap:20px;color:var(--rs-stone);font-size:.72rem}
