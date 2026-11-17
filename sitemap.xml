@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://regularizasaudearq.com.br/</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-17</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://regularizasaudearq.com.br/privacidade.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.2</priority>
   </url>
 </urlset>
