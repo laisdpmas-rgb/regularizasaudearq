@@ -1,5 +1,5 @@
 /* Regulariza Saúde — identidade: verde acinzentado, terracota, off-white e cinza claro
-   Tipografia: Manrope (títulos/identidade) · DM Sans (texto/navegação) · IBM Plex Mono (identificadores)
+   Tipografia: Manrope (títulos/identidade) · DM Sans (texto/navegação)
    Estrutura: 1 tokens · 2 base · 3 componentes · 4 seções · 5 páginas legais · 6 responsivo */
 
 /* 1 — TOKENS ------------------------------------------------------------ */
@@ -18,7 +18,6 @@
   --error:#8A3B2E;
   --head:'Manrope',Arial,sans-serif;
   --body:'DM Sans',Arial,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
   --max:1160px;
 }
 
@@ -32,7 +31,6 @@ button,a{-webkit-tap-highlight-color:transparent}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 .wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--muted)}
 .serif,h1,h2,h3{font-family:var(--head);font-weight:600;letter-spacing:-.035em}
 
 /* 3 — COMPONENTES ------------------------------------------------------- */
@@ -65,6 +63,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .navlinks a{text-decoration:none;font-size:.84rem;color:var(--muted);transition:color .2s}
 .navlinks a:hover{color:var(--ink)}
 .navlinks .btn-primary,.navlinks .btn-primary:hover{color:var(--paper)}
+.mobile-cta{display:none}
 .menu-toggle{display:none;background:none;border:1px solid var(--sage-l);padding:9px 11px;color:var(--ink);border-radius:2px}
 
 /* 4 — SEÇÕES ------------------------------------------------------------ */
@@ -100,8 +99,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .art-circle{position:absolute;width:120px;height:120px;border:1px solid var(--ink);border-radius:50%;left:12%;top:16%}
 .art-circle:after{content:'';position:absolute;inset:17px;border:1px solid var(--muted);border-radius:50%}
 .art-line{position:absolute;left:10%;right:8%;top:74%;height:1px;background:var(--ink);transform:rotate(-15deg)}
-.art-label{position:absolute;left:44px;bottom:42px;z-index:3;background:var(--paper);padding:18px 20px;max-width:250px;border-left:3px solid var(--ink)}
-.art-label small{display:block;font-family:var(--mono);text-transform:uppercase;letter-spacing:.13em;font-size:.65rem;color:var(--muted);margin-bottom:5px}
+.art-label{position:absolute;left:44px;bottom:42px;z-index:3;background:var(--paper);padding:18px 20px;max-width:250px;border:1px solid var(--line)}
+.art-label small{display:block;text-transform:uppercase;letter-spacing:.13em;font-size:.65rem;color:var(--muted);margin-bottom:5px}
 .art-label strong{font-family:var(--head);font-weight:600;font-size:1.3rem;line-height:1.2;letter-spacing:-.03em}
 
 /* Serviços */
@@ -116,7 +115,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 /* Faixa escura (parceria) */
 
 /* Processo */
-.deadline-note{margin-top:30px;padding:18px 20px;background:var(--mist-soft);color:var(--ink);font-size:.86rem;max-width:790px;border-left:3px solid var(--ink)}
+.deadline-note{margin-top:30px;padding:18px 20px;background:var(--mist-soft);color:var(--ink);font-size:.86rem;max-width:790px;border:1px solid var(--line)}
 
 /* Sobre */
 .about{display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;align-items:center}
@@ -131,7 +130,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .faq-list details:first-child{border-top:1px solid var(--ink)}
 .faq-list summary{cursor:pointer;list-style:none;font-weight:600;font-size:.95rem;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary:after{content:'+';font-family:var(--mono);font-size:1.3rem;font-weight:400;color:var(--ink)}
+.faq-list summary:after{content:'+';font-size:1.3rem;font-weight:400;color:var(--ink)}
 .faq-list details[open] summary:after{content:'−'}
 .faq-list details p{font-size:.88rem;color:var(--muted);max-width:690px;margin:13px 28px 2px 0}
 
@@ -149,7 +148,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .field input,.field select,.field textarea{border:1px solid var(--sage-l);background:var(--white);border-radius:2px;padding:12px;color:var(--ink);width:100%;min-height:46px}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink)}
 .field textarea{min-height:95px;resize:vertical}
-.field input::placeholder,.field textarea::placeholder{color:#8a857a}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:.85}
 .privacy{display:flex;align-items:flex-start;gap:10px;font-size:.76rem;color:var(--muted);margin:18px 0}
 .privacy input{margin-top:4px;accent-color:var(--ink)}
 .privacy a{color:var(--ink)}
@@ -167,7 +166,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .audience{padding:32px 30px;border:1px solid var(--line);background:var(--paper);display:flex;flex-direction:column;align-items:flex-start;gap:6px}
 .audience-partner{border-top:3px solid var(--terra)}
 .audience:not(.audience-partner){border-top:3px solid var(--green)}
-.audience-tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.audience-tag{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .audience h3{font-size:1.45rem;line-height:1.2;margin:8px 0 6px}
 .audience p{color:var(--muted);font-size:.95rem;margin:0 0 18px}
 .audience-actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:18px;align-items:center}
@@ -179,22 +178,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .info p{font-size:.9rem;color:var(--muted);margin:0}
 
 /* Serviços (detalhes) */
-.svc-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:12px;font-weight:500}
+.svc-num{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:12px;font-weight:500}
 .service{min-height:0}
 .service-main{border-color:var(--green);border-width:2px}
 .svc-list{margin:0 0 18px;padding-left:18px;font-size:.86rem;color:var(--ink)}
 .svc-list li{margin-bottom:5px}
-.svc-note{font-size:.82rem!important;color:var(--muted);border-left:2px solid var(--sage-l);padding-left:11px}
+.svc-note{font-size:.82rem!important;color:var(--muted);background:var(--mist-soft);padding:10px 12px}
 .text-link{margin-top:auto}
 
 /* Parceria */
 .partner{background:var(--ink);color:var(--paper);padding:84px 0}
 .partner-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:start}
-.partner .eyebrow{color:#D9A58F}
-.partner h2{font-size:clamp(1.9rem,3.8vw,2.9rem);line-height:1.1;margin:15px 0}
+.partner .partner h2{font-size:clamp(1.9rem,3.8vw,2.9rem);line-height:1.1;margin:15px 0}
 .partner .lead{font-size:1.1rem;color:var(--paper);max-width:none}
 .partner p{color:var(--mist);max-width:600px}
-.partner .partner-diff{border-left:3px solid var(--terra);padding-left:16px;margin:24px 0 28px}
+.partner .partner-diff{background:rgba(244,242,237,.07);padding:16px 18px;margin:24px 0 28px}
 .partner-side{background:rgba(244,242,237,.06);border:1px solid rgba(225,228,222,.25);padding:28px}
 .partner-side h3{font-size:1.1rem;margin:0 0 14px}
 .partner-list{margin:0 0 18px;padding-left:18px;color:var(--paper);font-size:.92rem}
@@ -208,7 +206,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .track h3{font-size:1.2rem;margin:0 0 16px}
 .steps-list{list-style:none;counter-reset:s;margin:0;padding:0}
 .steps-list li{counter-increment:s;position:relative;padding:0 0 18px 44px;font-size:.9rem;color:var(--muted)}
-.steps-list li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:0;font-family:var(--mono);font-size:.85rem;color:var(--ink)}
+.steps-list li:before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:0;font-size:.85rem;color:var(--ink)}
 .steps-list b{color:var(--ink);display:block}
 
 /* Sobre */
@@ -276,7 +274,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .navlinks{display:none;position:absolute;top:71px;left:0;right:0;background:var(--paper);padding:18px 24px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}
   .navlinks.open{display:flex}
   .navlinks a{padding:12px 0;border-bottom:1px solid var(--line);font-size:.9rem}
-  .navlinks .mobile-cta{margin-top:14px;border:0;color:var(--paper)}
+  .navlinks .mobile-cta{display:inline-flex;margin-top:14px;border:0;color:var(--paper)}
   .nav>.btn{display:none}
   .hero{padding:48px 0 55px}
   .hero-grid{grid-template-columns:1fr;gap:35px}
@@ -311,3 +309,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   html{scroll-behavior:auto}
   *,*:before,*:after{transition:none!important;animation:none!important}
 }
+
+.partner :focus-visible,.footer :focus-visible{outline-color:var(--paper)}
+.text-link{display:inline-flex;align-items:center;min-height:44px;padding-bottom:0}
+.menu-toggle{min-height:44px}
+.footer-links a,.footer-bottom a{display:inline-flex;align-items:center;min-height:44px}
+::selection{background:var(--green);color:var(--paper)}
+input,select,textarea{caret-color:var(--terra)}
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
