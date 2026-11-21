@@ -79,16 +79,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
 .hero h1{font-size:clamp(2.1rem,4.2vw,3.4rem);line-height:1.1;margin:20px 0 24px;max-width:700px;}
 .hero h1 em{font-style:normal;color:var(--rs-mid)}
-.hero-plan{margin:0;background:var(--rs-sand);padding:22px}
-.hero-plan svg{display:block;width:100%;height:auto}
-.hero-plan figcaption{margin-top:14px;font-size:.8rem;color:var(--rs-mid);text-wrap:balance}
-.pl-w{fill:none;stroke:var(--rs-ink);stroke-width:5;stroke-linecap:square}
-.pl-f{fill:none;stroke:var(--rs-stone);stroke-width:1.5}
-.pl-t{font:500 15px var(--head);fill:var(--rs-ink)}
-.pl-clean{fill:none;stroke:var(--rs-ink);stroke-width:2.5}
-.pl-dirty{fill:none;stroke:var(--rs-mid);stroke-width:2.5;stroke-dasharray:7 6}
-.pl-seta-l{fill:var(--rs-ink)}
-.pl-seta-s{fill:var(--rs-mid)}
+.hero-index{list-style:none;margin:0;padding:0;border-top:1px solid var(--rs-stone)}
+.hero-index li{border-bottom:1px solid var(--rs-stone)}
+.hero-index a{display:flex;align-items:baseline;gap:22px;padding:22px 0;text-decoration:none;font-family:var(--head);font-weight:500;font-size:1.3rem;line-height:1.25;letter-spacing:-.015em;color:var(--rs-ink);transition:padding-left .2s}
+.hero-index a:hover{padding-left:8px}
+.hero-index span{font-size:.8rem;letter-spacing:.14em;color:var(--rs-mid);min-width:26px}
 .hero-copy{font-size:1.25rem;max-width:520px;color:var(--rs-mid)}
 .hero-cred{font-family:var(--head);font-size:.8rem;letter-spacing:.03em;color:var(--rs-mid);margin:22px 0 0}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 25px}
@@ -237,6 +232,7 @@ input[type=checkbox]{width:24px;height:24px;min-height:24px;flex:none;accent-col
   .hero-grid{grid-template-columns:1fr;gap:35px}
   .hero h1{font-size:clamp(2rem,9vw,2.8rem)}
   .hero-copy{font-size:.98rem}
+  .hero-index a{font-size:1.15rem;padding:18px 0}
   .brand-by{display:none}
   .section{padding:68px 0}
   .section-head{margin-bottom:30px}
