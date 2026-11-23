@@ -14,7 +14,7 @@ SITE = 'https://regularizasaudearq.com.br'
 WA = re.search(r"whatsappNumber:\s*'(\d+)'", (ROOT / 'assets/js/config.js').read_text(encoding='utf-8')).group(1)
 REVISADO = 'novembro de 2026'
 
-AUTOR = ('Laís Abreu é arquiteta e urbanista, com especialização em Arquitetura da Saúde pelo Hospital Israelita '
+AUTOR = ('Laís Abreu é arquiteta e urbanista, com pós-graduação em Arquitetura da Saúde pelo Hospital Israelita '
          'Albert Einstein, e atua no desenvolvimento de projetos arquitetônicos e documentação técnica para '
          'estabelecimentos de saúde.')
 
