@@ -5,4 +5,34 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://regularizasaudearq.com.br/projeto-basico-de-arquitetura-pba/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://regularizasaudearq.com.br/laudo-tecnico-de-avaliacao-lta-sao-paulo/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://regularizasaudearq.com.br/projeto-arquitetonico-vigilancia-sanitaria-mg/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://regularizasaudearq.com.br/projeto-vigilancia-sanitaria-consultorio-odontologico/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://regularizasaudearq.com.br/projeto-vigilancia-sanitaria-clinica-estetica/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
