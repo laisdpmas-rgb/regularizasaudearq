@@ -8,7 +8,7 @@
   }
   document.querySelectorAll('.whatsapp-link').forEach(function (l) {
     if (!cfg.whatsappNumber) { l.href = '#avaliacao'; return; }
-    l.href = 'https://wa.me/' + cfg.whatsappNumber + '?text=' + encodeURIComponent(l.getAttribute('data-message') || '');
+    l.href = 'https://wa.me/' + cfg.whatsappNumber + '?text=' + encodeURIComponent((l.getAttribute('data-message') || '') + (window.rsOrigem ? window.rsOrigem() : ''));
     l.target = '_blank'; l.rel = 'noopener noreferrer';
   });
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();

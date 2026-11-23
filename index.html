@@ -46,7 +46,7 @@
   const nav = document.getElementById('navlinks');
   toggle.addEventListener('click', () => { const open = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu'); toggle.textContent = open ? '× Fechar' : '☰ Menu'; });
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.textContent='☰ Menu'; }));
-  function whatsappUrl(message){ if(!CONFIG.whatsappNumber) return ''; return 'https://wa.me/'+CONFIG.whatsappNumber+'?text='+encodeURIComponent(message); }
+  function whatsappUrl(message){ if(!CONFIG.whatsappNumber) return ''; return 'https://wa.me/'+CONFIG.whatsappNumber+'?text='+encodeURIComponent(message + (window.rsOrigem ? window.rsOrigem() : '')); }
   document.querySelectorAll('.whatsapp-link').forEach(link => { const url=whatsappUrl(link.dataset.message || 'Olá! Gostaria de solicitar uma avaliação.'); if(url){link.href=url;link.target='_blank';link.rel='noopener noreferrer';} else {link.href='#avaliacao';link.title='O WhatsApp será ativado após a configuração do número de contato.';} });
   document.querySelectorAll('[data-service]').forEach(link => link.addEventListener('click', () => { const select=document.getElementById('momento'); const option=[...select.options].find(o=>o.text===link.dataset.service); if(option) select.value=option.value; }));
   const fc=document.querySelector('.floating-cta');

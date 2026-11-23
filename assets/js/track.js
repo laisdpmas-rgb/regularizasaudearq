@@ -8,6 +8,20 @@
   function stored() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function store(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
+  // Origem do anúncio: guarda utm_* e gclid da URL (só nesta sessão) e devolve uma linha para o fim da mensagem do WhatsApp.
+  var OK = /^[A-Za-z0-9_.~%+\-]{1,100}$/;
+  (function () {
+    var q = new URLSearchParams(location.search), o = {};
+    ['utm_source', 'utm_medium', 'utm_campaign', 'gclid'].forEach(function (k) { var v = q.get(k); if (v && OK.test(v)) o[k] = v; });
+    if (Object.keys(o).length) { try { sessionStorage.setItem('rs_origem', JSON.stringify(o)); } catch (e) {} }
+  })();
+  window.rsOrigem = function () {
+    var o = {}; try { o = JSON.parse(sessionStorage.getItem('rs_origem') || '{}'); } catch (e) {}
+    var campanha = [o.utm_source, o.utm_medium, o.utm_campaign].filter(Boolean).join(' / '), it = [];
+    if (campanha) it.push(campanha); if (o.gclid) it.push('gclid ' + o.gclid);
+    return it.length ? '\n\nOrigem: ' + it.join(' | ') : '';
+  };
+
   function track(name, params) {
     var p = Object.assign({ page_id: pageId }, params || {});
     window.dataLayer.push(Object.assign({ event: name }, p));
