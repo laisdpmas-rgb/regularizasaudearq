@@ -48,7 +48,7 @@ dict(
  desc='Elaboração de PBA, Memorial Descritivo Sanitário, RRT e documentação para Vigilância Sanitária de clínicas e consultórios. Solicite uma avaliação.',
  h1='Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária',
  nugget='O Projeto Básico de Arquitetura (PBA) reúne os documentos técnicos de arquitetura — desenhos e memorial descritivo — que a Vigilância Sanitária pode pedir para avaliar a estrutura física, os ambientes e os fluxos de um estabelecimento de saúde. Se ele é exigido, e em que formato, varia conforme a atividade, o risco e o município ou estado.',
- cta1='Solicitar avaliação do meu projeto', cta_mid='Entenda o que seu estabelecimento precisa', cta_end='Solicitar avaliação do meu projeto',
+ cta1='Solicitar avaliação do meu projeto', cta_mid='Entenda o que seu estabelecimento precisa', cta_mid_btn='Veja o que o seu caso precisa', cta_end='Solicitar avaliação do meu projeto',
  msg='Olá! Gostaria de uma avaliação e orçamento para elaboração de Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária.\n\nCidade/UF: ',
  service='Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária',
  service_desc='Elaboração ou adequação do Projeto Básico de Arquitetura, memoriais descritivos e documentação técnica para avaliação pela Vigilância Sanitária.',
@@ -91,7 +91,7 @@ dict(
  desc='Projeto, documentação técnica e protocolo para a avaliação físico-funcional (LTA/DCFF) de estabelecimentos de saúde em São Paulo. Atendimento remoto.',
  h1='Laudo Técnico de Avaliação (LTA) para Vigilância Sanitária em São Paulo',
  nugget='No Estado de São Paulo, o Laudo Técnico de Avaliação (LTA) é a decisão da Vigilância Sanitária sobre a avaliação físico-funcional do projeto de uma edificação que abriga atividade de interesse da saúde. A Regulariza Saúde elabora o projeto e a documentação técnica e faz o protocolo do pedido; a emissão do LTA é sempre do órgão sanitário.',
- cta1='Solicitar orçamento do projeto para LTA/DCFF', cta_mid='Descubra quais documentos podem ser necessários', cta_end='Solicitar orçamento para LTA ou DCFF',
+ cta1='Solicitar orçamento para LTA/DCFF', cta_mid='Descubra quais documentos podem ser necessários', cta_mid_btn='Veja os documentos do caso', cta_end='Solicitar orçamento para LTA ou DCFF',
  msg='Olá! Preciso de orientação e orçamento para projeto, documentação e protocolo de LTA ou DCFF de um estabelecimento de saúde. Gostaria de entender os documentos e as etapas necessários.\n\nCidade/UF: ',
  service='Projeto, documentação técnica e protocolo para avaliação físico-funcional (LTA/DCFF)',
  service_desc='Elaboração do projeto arquitetônico, dos memoriais e do RRT, organização da documentação e protocolo do pedido de avaliação físico-funcional (LTA) ou de DCFF na Vigilância Sanitária, com atendimento remoto.',
@@ -176,7 +176,7 @@ dict(
  desc='Projeto arquitetônico e documentação para consultórios e clínicas odontológicas. Avaliação de processamento de materiais, fluxos e requisitos sanitários.',
  h1='Projeto Arquitetônico para Consultórios e Clínicas Odontológicas',
  nugget='A RDC 1002/2025, da Anvisa, passou a regular os serviços que prestam assistência odontológica e classifica os consultórios por estrutura física e equipamentos. Se um consultório precisa apresentar projeto à Vigilância Sanitária depende do enquadramento, da atividade e das regras do órgão local, e o diagnóstico mostra o que vale para o seu caso.',
- cta1='Solicitar avaliação do consultório odontológico', cta_mid='Entenda o que seu consultório precisa', cta_end='Solicitar avaliação do consultório odontológico',
+ cta1='Solicitar avaliação odontológica', cta_mid='Entenda o que seu consultório precisa', cta_mid_btn='Veja o que o consultório precisa', cta_end='Solicitar avaliação odontológica',
  msg='Olá! Tenho um consultório/clínica odontológica e preciso de orientação sobre projeto arquitetônico e documentação para Vigilância Sanitária.',
  service='Projeto arquitetônico e documentação para consultórios e clínicas odontológicas',
  service_desc='Elaboração de projeto arquitetônico, memoriais e documentação técnica para consultórios e clínicas odontológicas, conforme a RDC 1002/2025 e as regras da Vigilância Sanitária local.',
@@ -213,7 +213,7 @@ dict(
  desc='Projetos arquitetônicos e documentação técnica para clínicas de estética. Avaliação conforme procedimentos realizados e exigências sanitárias.',
  h1='Projeto Arquitetônico para Clínicas de Estética e Procedimentos Estéticos',
  nugget='O enquadramento sanitário de uma clínica de estética depende dos procedimentos realizados, e o licenciamento e a inspeção são, em regra, das vigilâncias sanitárias estaduais, distrital e municipais. A Anvisa reavalia o tema desde setembro de 2026. Por isso, o primeiro passo é conferir os procedimentos e a posição do órgão local.',
- cta1='Solicitar avaliação da minha clínica de estética', cta_mid='Solicite uma avaliação técnica', cta_end='Solicitar avaliação da minha clínica de estética',
+ cta1='Solicitar avaliação de estética', cta_mid='Solicite uma avaliação técnica', cta_end='Solicitar avaliação de estética',
  msg='Olá! Tenho uma clínica de estética e gostaria de avaliar a necessidade de projeto arquitetônico e documentação para Vigilância Sanitária. Gostaria de informar os procedimentos realizados e receber orientação.',
  service='Projeto arquitetônico e documentação para clínicas de estética',
  service_desc='Elaboração de projeto arquitetônico, memoriais e documentação técnica para clínicas de estética, conforme os procedimentos realizados e as exigências da Vigilância Sanitária local.',
@@ -253,9 +253,9 @@ def wa_link(cls, label, pg, loc):
     return (f'<a class="{cls} whatsapp-link" href="{wa_url(pg["msg"])}" data-message="{escape(pg["msg"])}" '
             f'data-track="{pg["track"]}" data-cta-location="{loc}" target="_blank" rel="noopener noreferrer">{label}</a>')
 
-HEADER = '''<header class="topbar"><div class="wrap nav"><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-verde.svg" alt="" width="164" height="44"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menu">☰ Menu</button><nav class="navlinks" id="navlinks" aria-label="Navegação principal"><a href="/#servicos">Serviços</a><a href="/#parcerias">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a><a class="btn btn-primary mobile-cta" href="#contato">Solicitar avaliação ↗</a></nav>{cta}</div></header>'''
+HEADER = '''<header class="topbar"><div class="wrap nav"><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-verde.svg" alt="" width="164" height="44"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menu">☰ Menu</button><nav class="navlinks" id="navlinks" aria-label="Navegação principal"><a href="/#servicos">Serviços</a><a href="/#parcerias">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a><a class="btn btn-primary mobile-cta" href="#contato">Solicitar avaliação</a></nav>{cta}</div></header>'''
 
-FOOTER = '''<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-claro.svg" alt="" width="164" height="44" loading="lazy"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><p>Projetos arquitetônicos para regularização sanitária de estabelecimentos de saúde. Atendimento remoto em todo o Brasil.</p></div><nav class="footer-links" aria-label="Links do rodapé"><a href="/#servicos">Serviços</a><a href="/#parcerias">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a></nav></div><nav class="footer-links footer-guides" aria-label="Guias"><a href="/projeto-basico-de-arquitetura-pba/">PBA</a><a href="/laudo-tecnico-de-avaliacao-lta-sao-paulo/">LTA em São Paulo</a><a href="/projeto-arquitetonico-vigilancia-sanitaria-mg/">Minas Gerais</a><a href="/projeto-vigilancia-sanitaria-consultorio-odontologico/">Odontologia</a><a href="/projeto-vigilancia-sanitaria-clinica-estetica/">Estética</a></nav><div class="footer-bottom"><span>© <span id="year"></span> Laís Abreu Arquitetura LTDA · CNPJ 53.427.967/0001-10 · Regulariza Saúde · CAU nº A263615-8</span><span>Contato via WhatsApp · <a href="/privacidade.html">Política de Privacidade</a> · <button type="button" class="link-btn" data-cookies>Gerenciar cookies</button></span></div></div></footer>'''
+FOOTER = '''<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-claro.svg" alt="" width="164" height="44" loading="lazy"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><p>Projetos arquitetônicos para regularização sanitária de estabelecimentos de saúde. Atendimento remoto em todo o Brasil.</p></div><nav class="footer-links" aria-label="Links do rodapé"><a href="/#servicos">Serviços</a><a href="/#parcerias">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a></nav></div><nav class="footer-links footer-guides" aria-label="Guias"><a href="/projeto-basico-de-arquitetura-pba/">PBA</a><a href="/laudo-tecnico-de-avaliacao-lta-sao-paulo/">LTA em São Paulo</a><a href="/projeto-arquitetonico-vigilancia-sanitaria-mg/">Minas Gerais</a><a href="/projeto-vigilancia-sanitaria-consultorio-odontologico/">Odontologia</a><a href="/projeto-vigilancia-sanitaria-clinica-estetica/">Estética</a></nav><div class="footer-bottom"><span>© <span id="year"></span> Laís Abreu Arquitetura LTDA, CNPJ 53.427.967/0001-10, Regulariza Saúde, CAU nº A263615-8</span><span>Contato via WhatsApp, <a href="/privacidade.html">Política de Privacidade</a>, <button type="button" class="link-btn" data-cookies>Gerenciar cookies</button></span></div></div></footer>'''
 
 def jsonld(pg, url):
     graph = [
@@ -278,7 +278,7 @@ def render(pg):
         h2, body = s[0], s[1]
         secs.append(f'<section class="section prose-section"><div class="wrap"><div class="prose"><h2 class="serif">{h2}</h2>{body}</div></div></section>')
         if len(s) > 2 and s[2] == 'cta':
-            secs.append(f'<section class="cta-band"><div class="wrap"><p class="cta-band-text">{pg["cta_mid"]}.</p>{wa_link("btn btn-accent", pg["cta_mid"] + " ↗", pg, "meio")}</div></section>')
+            secs.append(f'<section class="cta-band"><div class="wrap"><p class="cta-band-text">{pg["cta_mid"]}.</p>{wa_link("btn btn-accent", pg.get("cta_mid_btn", pg["cta_mid"]), pg, "meio")}</div></section>')
     faq = ''.join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q, a in pg['faq'])
     related = ''.join(f'<li><a href="{u}">{t}</a></li>' for t, u in pg['related'])
     sources = ''.join(f'<li><a href="{u}" rel="noopener" target="_blank">{t}</a></li>' for t, u in pg['sources'])
@@ -306,22 +306,22 @@ def render(pg):
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-{HEADER.format(cta=wa_link("btn btn-primary whatsapp-link-header", "Solicitar avaliação ↗", pg, "cabecalho"))}
+{HEADER.format(cta=wa_link("btn btn-primary whatsapp-link-header", "Solicitar avaliação", pg, "cabecalho"))}
 <main id="conteudo">
 <section class="page-hero"><div class="wrap">
 <nav class="crumbs" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li aria-current="page">{pg['crumb']}</li></ol></nav>
 <h1 class="serif">{pg['h1']}</h1>
 <p class="nugget">{pg['nugget']}</p>
-<div class="hero-actions">{wa_link("btn btn-accent", pg["cta1"] + " ↗", pg, "topo")}</div>
+<div class="hero-actions">{wa_link("btn btn-accent", pg["cta1"] + "", pg, "topo")}</div>
 <p class="micro-note">Atendimento remoto para todo o Brasil, conforme a viabilidade técnica do caso.</p>
 </div></section>
 {''.join(secs)}
 <section class="section prose-section" id="faq"><div class="wrap"><div class="prose"><h2 class="serif">Perguntas frequentes</h2><div class="faq-list">{faq}</div></div></div></section>
 <section class="section prose-section"><div class="wrap"><div class="prose"><h2 class="serif">Quem assina o projeto</h2>{p(AUTOR)}<h3>Veja também</h3><ul class="related">{related}</ul><h3>Fontes oficiais consultadas</h3><ul class="sources">{sources}</ul>{p(f"Conteúdo informativo, revisado em {REVISADO}. As exigências variam conforme a atividade, o município e o estado e podem mudar: confirme sempre com a Vigilância Sanitária do seu município. Este texto não substitui a orientação do órgão sanitário nem garante aprovação, prazo ou licença.")}</div></div></section>
-<section class="cta-section" id="contato"><div class="wrap cta-final"><h2 class="serif">Converse sobre a situação do seu projeto.</h2><p>Informe o tipo de estabelecimento, a cidade e a situação atual. Na primeira conversa entendemos o seu cenário, sem compromisso, para indicar o melhor caminho.</p>{wa_link("btn btn-accent", pg["cta_end"] + " ↗", pg, "final")}</div></section>
+<section class="cta-section" id="contato"><div class="wrap cta-final"><h2 class="serif">Converse sobre a situação do seu projeto.</h2><p>Informe o tipo de estabelecimento, a cidade e a situação atual. Na primeira conversa entendemos o seu cenário, sem compromisso, para indicar o melhor caminho.</p>{wa_link("btn btn-accent", pg["cta_end"] + "", pg, "final")}</div></section>
 </main>
 {FOOTER}
-{wa_link("btn btn-primary floating-cta", "Solicitar avaliação ↗", pg, "flutuante").replace('<a ', '<a aria-label="Solicitar avaliação pelo WhatsApp" ', 1)}
+{wa_link("btn btn-primary floating-cta", "Solicitar avaliação", pg, "flutuante").replace('<a ', '<a aria-label="Solicitar avaliação pelo WhatsApp" ', 1)}
 <script src="/assets/js/config.js"></script><script src="/assets/js/track.js"></script><script src="/assets/js/page.js"></script>
 </body>
 </html>
