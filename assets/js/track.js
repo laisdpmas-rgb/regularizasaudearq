@@ -51,7 +51,7 @@
       var v = e.target.getAttribute && e.target.getAttribute('data-c'); if (!v) return;
       store(v); b.remove(); if (v === 'granted') loadGA();
     });
-    document.body.appendChild(b);
+    document.body.insertBefore(b, document.body.firstChild); // topo: o selo do Netlify ocupa o canto inferior direito
   }
 
   document.addEventListener('click', function (e) {
