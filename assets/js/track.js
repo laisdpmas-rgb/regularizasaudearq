@@ -36,7 +36,9 @@
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + cfg.gaId;
     document.head.appendChild(s);
     window.gtag('js', new Date());
-    window.gtag('config', cfg.gaId);
+    // page_view enviado de forma explícita (não depende do envio automático da configuração).
+    window.gtag('config', cfg.gaId, { send_page_view: false });
+    window.gtag('event', 'page_view', { page_title: document.title, page_location: location.href, page_path: location.pathname });
     if (document.documentElement.getAttribute('data-page')) track('page_view_estrategica', { page_path: location.pathname });
   }
 
