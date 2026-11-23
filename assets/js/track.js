@@ -1,5 +1,5 @@
 // Medição: GA4 carregado direto, só depois do aceite de cookies. Sem aceite, nada é enviado ao Google.
-// Os eventos também vão para o dataLayer (inerte sem GTM). Abrir o WhatsApp mede o clique, não um lead recebido.
+// Abrir o WhatsApp mede o clique, não um lead recebido.
 (function () {
   var cfg = window.RS_CONFIG || {}, KEY = 'rs_consent';
   window.dataLayer = window.dataLayer || [];
@@ -24,9 +24,10 @@
 
   function track(name, params) {
     var p = Object.assign({ page_id: pageId }, params || {});
-    window.dataLayer.push(Object.assign({ event: name }, p));
     if (ga) window.gtag('event', name, p);
   }
+
+  window.rsTrack = track;
 
   function loadGA() {
     if (ga || !/^G-[A-Z0-9]+$/.test(cfg.gaId || '')) return;
@@ -43,13 +44,14 @@
   }
 
   function banner() {
+    if (document.querySelector('.consent')) return;
     var b = document.createElement('div');
     b.className = 'consent'; b.setAttribute('role', 'region'); b.setAttribute('aria-label', 'Aviso de cookies');
     b.innerHTML = '<p>Usamos o Google Analytics para medir visitas e cliques nos botões de contato. Você aceita? <a href="/privacidade.html">Política de Privacidade</a></p>' +
       '<div class="consent-actions"><button type="button" class="btn btn-accent" data-c="granted">Aceitar</button><button type="button" class="btn btn-outline" data-c="denied">Recusar</button></div>';
     b.addEventListener('click', function (e) {
       var v = e.target.getAttribute && e.target.getAttribute('data-c'); if (!v) return;
-      store(v); b.remove(); if (v === 'granted') loadGA();
+      store(v); b.remove(); if (v === 'granted') loadGA(); else if (ga) location.reload(); // GA já carregado: recarrega sem ele
     });
     document.body.insertBefore(b, document.body.firstChild); // topo: o selo do Netlify ocupa o canto inferior direito
   }
@@ -59,6 +61,11 @@
     var loc = a.getAttribute('data-cta-location') || '';
     track('click_whatsapp', { cta_location: loc });
     var t = a.getAttribute('data-track'); if (t) track(t, { cta_location: loc });
+  });
+
+  // "Gerenciar cookies" no rodapé: apaga a escolha e mostra o aviso de novo.
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('[data-cookies]')) { try { localStorage.removeItem(KEY); } catch (x) {} banner(); }
   });
 
   var c = stored();

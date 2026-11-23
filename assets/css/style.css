@@ -306,3 +306,5 @@ p,li,summary{text-wrap:pretty}
 .consent-actions{display:flex;gap:10px}
 .consent .btn-outline{color:var(--rs-paper);border-color:var(--rs-paper)}
 .consent .btn-outline:hover{background:rgba(243,240,232,.14)}
+
+.link-btn{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer;min-height:44px}
