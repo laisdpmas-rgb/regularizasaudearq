@@ -2,6 +2,6 @@
 window.RS_CONFIG = {
   // WhatsApp: formato internacional, apenas dígitos.
   whatsappNumber: '5537998287505',
-  // Google Tag Manager: deixe vazio até o aviso de cookies/consentimento estar no ar. Ex.: 'GTM-ABC1234'.
-  gtmId: ''
+  // Google Tag Manager. Vazio = não carrega nada. Antes de publicar com o ID, confirmar o aviso de cookies/consentimento.
+  gtmId: 'GTM-WLGVN7LP'
 };
