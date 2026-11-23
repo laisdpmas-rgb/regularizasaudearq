@@ -88,39 +88,42 @@ dict(
 dict(
  id='lta-sp', slug='laudo-tecnico-de-avaliacao-lta-sao-paulo', track='click_cta_lta', crumb='LTA em São Paulo',
  title='LTA para Vigilância Sanitária em São Paulo | Regulariza Saúde',
- desc='Projeto arquitetônico e documentação técnica para a avaliação físico-funcional (LTA) de estabelecimentos de saúde no Estado de São Paulo.',
+ desc='Projeto, documentação técnica e protocolo para a avaliação físico-funcional (LTA/DCFF) de estabelecimentos de saúde em São Paulo. Atendimento remoto.',
  h1='Laudo Técnico de Avaliação (LTA) para Vigilância Sanitária em São Paulo',
- nugget='No Estado de São Paulo, o Laudo Técnico de Avaliação (LTA) é a decisão da Vigilância Sanitária sobre a avaliação físico-funcional do projeto de uma edificação que abriga atividade de interesse da saúde. O LTA é emitido pelo órgão sanitário; ao profissional cabe elaborar o projeto e a documentação técnica que embasam a avaliação.',
- cta1='Solicitar orçamento para projeto e documentação do LTA', cta_mid='Descubra quais documentos podem ser necessários', cta_end='Solicitar orçamento para LTA',
- msg='Olá! Preciso de orientação e orçamento para elaboração de LTA para um estabelecimento de saúde no Estado de São Paulo. Gostaria de entender os documentos e etapas necessários.',
- service='Projeto e documentação técnica para avaliação físico-funcional (LTA) no Estado de São Paulo',
- service_desc='Elaboração do projeto arquitetônico e da documentação técnica que embasam a avaliação físico-funcional pela Vigilância Sanitária no Estado de São Paulo.',
+ nugget='No Estado de São Paulo, o Laudo Técnico de Avaliação (LTA) é a decisão da Vigilância Sanitária sobre a avaliação físico-funcional do projeto de uma edificação que abriga atividade de interesse da saúde. A Regulariza Saúde elabora o projeto e a documentação técnica e faz o protocolo do pedido; a emissão do LTA é sempre do órgão sanitário.',
+ cta1='Solicitar orçamento do projeto para LTA/DCFF', cta_mid='Descubra quais documentos podem ser necessários', cta_end='Solicitar orçamento para LTA ou DCFF',
+ msg='Olá! Preciso de orientação e orçamento para projeto, documentação e protocolo de LTA ou DCFF de um estabelecimento de saúde. Gostaria de entender os documentos e as etapas necessários.\n\nCidade/UF: ',
+ service='Projeto, documentação técnica e protocolo para avaliação físico-funcional (LTA/DCFF)',
+ service_desc='Elaboração do projeto arquitetônico, dos memoriais e do RRT, organização da documentação e protocolo do pedido de avaliação físico-funcional (LTA) ou de DCFF na Vigilância Sanitária, com atendimento remoto.',
  sections=[
   ('O que é o LTA e quando ele é necessário?',
    p('A Portaria CVS 1/2019, do Centro de Vigilância Sanitária de São Paulo, define o LTA como o “documento que expressa decisão do órgão de vigilância sanitária competente sobre a avaliação física funcional do projeto de edificação, e seus complementos, que abriga atividade de interesse da saúde”.')
    + p('A mesma portaria estabelece que os estabelecimentos sujeitos à avaliação físico-funcional do projeto devem atender à Portaria CVS 10/2017. Quais atividades estão sujeitas a essa avaliação depende do enquadramento e das regras do órgão sanitário do município: a lista é definida pela norma e pela Vigilância Sanitária local, e não por este site.')
-   + p('<strong>Atenção na capital paulista:</strong> segundo a Prefeitura de São Paulo, desde a Portaria SMS/COVISA 404/2024 (publicada em junho de 2024) o LTA foi substituído pela Declaração de Conformidade Físico Funcional (DCFF), que acompanha pedidos de licença inicial, mudança de endereço e ampliação de atividades que alterem a estrutura física. Em outros municípios paulistas, confirme com a Vigilância Sanitária local qual documento se aplica.')),
+   + p('<strong>Na capital paulista o documento é outro:</strong> veja a seção sobre a DCFF. Em outros municípios paulistas, confirme com a Vigilância Sanitária local qual documento se aplica.')),
+  ('Na capital paulista, o LTA foi substituído pela DCFF',
+   p('Segundo a Prefeitura de São Paulo, desde a Portaria SMS/COVISA 404/2024 (publicada em junho de 2024) o LTA foi substituído pela Declaração de Conformidade Físico Funcional (DCFF). Ela acompanha os pedidos de licença de funcionamento sanitária inicial, de alteração de endereço e de ampliação de atividades que alterem a estrutura física.')
+   + p('Para o pedido, a Prefeitura lista a DCFF, a ART ou o RRT do profissional de engenharia ou arquitetura responsável pelo projeto físico e o Memorial Descritivo de Atividades. O Regulariza Saúde elabora o projeto, o RRT e os memoriais, organiza a documentação e faz o protocolo do pedido. Quem assina cada documento e como o envio é feito são confirmados com a Vigilância Sanitária antes de começar.')),
   ('Qual a diferença entre LTA e PBA?',
    p('<strong>São coisas diferentes e não são sinônimos.</strong> O LTA é uma decisão da Vigilância Sanitária. O Projeto Básico de Arquitetura (PBA) é um conjunto de documentos técnicos de projeto, elaborado por profissional habilitado. Em São Paulo, o projeto e os documentos técnicos são a base que o órgão sanitário avalia; o resultado dessa avaliação é o que o órgão formaliza.')
    + p('Cada órgão pode ter exigências próprias sobre a forma de apresentar o projeto. Por isso, a nomenclatura e os documentos pedidos devem ser confirmados no município do estabelecimento antes de começar.')),
   ('Quem emite o LTA e quem elabora o projeto e a documentação?',
    p('<strong>Quem emite o LTA</strong> é a Vigilância Sanitária competente. Nenhum arquiteto ou escritório emite o LTA nem pode antecipar o seu resultado.')
-   + p('<strong>Quem elabora o projeto e a documentação técnica</strong> é um profissional habilitado, com responsabilidade técnica registrada em ART ou RRT. A Prefeitura de São Paulo, por exemplo, pede a ART ou o RRT do profissional de engenharia ou arquitetura responsável pelo projeto físico. O Regulariza Saúde atua nessa etapa: projeto arquitetônico, memoriais, RRT e preparo do processo.')),
-  ('Atendimento em São Paulo e região',
-   p('O atendimento é remoto, sem criar uma página para cada cidade. Atendemos estabelecimentos em municípios paulistas como São Paulo, Campinas, Guarulhos, Barueri, Osasco, Jundiaí, Ribeirão Preto, São José do Rio Preto, Santos, São Bernardo do Campo e Sorocaba, entre outros.')
+   + p('<strong>Quem elabora o projeto e a documentação técnica</strong> é um profissional habilitado, com responsabilidade técnica registrada em ART ou RRT. A Prefeitura de São Paulo, por exemplo, pede a ART ou o RRT do profissional de engenharia ou arquitetura responsável pelo projeto físico.')
+   + p('O Regulariza Saúde atua nessa etapa: projeto arquitetônico, memoriais, RRT, organização da documentação e <strong>protocolo do pedido</strong> na Vigilância Sanitária.')),
+  ('Atendimento remoto em todo o Brasil, com projetos em São Paulo',
+   p('O atendimento é remoto e abrange o Brasil inteiro; esta página trata do Estado de São Paulo. Atendemos estabelecimentos em municípios paulistas como São Paulo, Campinas, Guarulhos, Barueri, Osasco, Jundiaí, Ribeirão Preto, São José do Rio Preto, Santos, São Bernardo do Campo e Sorocaba, entre outros.')
    + p('<strong>Os municípios não seguem, necessariamente, o mesmo fluxo de protocolo ou os mesmos documentos.</strong> A capital, por exemplo, adota a DCFF. Antes de começar, levantamos com a Vigilância Sanitária do seu município como o pedido deve ser feito.'), 'cta'),
   ('Quais documentos podem ser necessários?',
-   p('Depende da atividade, do porte e do município. Como referência, a Prefeitura de São Paulo lista, para a DCFF:')
-   + ul(['a Declaração de Conformidade Físico Funcional (modelo da Portaria SMS/COVISA 404/2024);', 'a ART ou o RRT do profissional de engenharia ou arquitetura responsável pelo projeto físico;', 'o Memorial Descritivo de Atividades.'])
-   + p('Nos demais municípios, os documentos seguem a portaria estadual e a orientação do órgão local. Além deles, normalmente precisamos de planta ou levantamento do imóvel, fotos e a descrição das atividades e procedimentos.')),
+   p('Depende da atividade, do porte e do município. Na capital, os documentos da DCFF estão na seção acima. Nos demais municípios, eles seguem a portaria estadual e a orientação do órgão local.')
+   + p('Além deles, normalmente precisamos de planta ou levantamento do imóvel, fotos e a descrição das atividades e procedimentos.')),
   ('Como funciona o trabalho até a primeira manifestação da VISA?',
-   ol(['Análise preliminar da atividade, do imóvel e do município.', 'Proposta com escopo, entregáveis e condições comerciais.', 'Elaboração do projeto, dos memoriais e do RRT, conforme o escopo.', 'Preparação da documentação e, quando contratado, protocolo na Vigilância Sanitária.', 'Acompanhamento até a primeira manifestação do órgão sanitário, quando contratado.'])
+   ol(['Análise preliminar da atividade, do imóvel e do município.', 'Proposta com escopo, entregáveis e condições comerciais.', 'Elaboração do projeto, dos memoriais e do RRT, conforme o escopo.', 'Organização da documentação e protocolo do pedido na Vigilância Sanitária.', 'Acompanhamento até a primeira manifestação do órgão sanitário, quando contratado.'])
    + p('A primeira manifestação, o prazo de análise e a decisão são da Vigilância Sanitária. O que acontece depois (novas rodadas de ajuste, por exemplo) é tratado conforme o que a proposta definir.') + FORA),
  ],
  faq=[
   ('Quem pode elaborar o LTA?', 'O LTA é emitido pela Vigilância Sanitária competente, e não elaborado por arquiteto ou engenheiro. O projeto e a documentação técnica que o órgão avalia são elaborados por profissional habilitado, com ART ou RRT.'),
   ('Quais documentos são necessários?', 'Depende da atividade e do município. Na capital, a Prefeitura de São Paulo lista a DCFF, a ART ou o RRT do responsável pelo projeto físico e o Memorial Descritivo de Atividades. Nos outros municípios, confirme com a Vigilância Sanitária local.'),
-  ('Como solicitar a avaliação?', 'O pedido é feito junto à Vigilância Sanitária do município, pelos canais definidos por ela. Como o procedimento muda de município para município, levantamos o caminho correto antes de preparar a documentação.'),
+  ('Como solicitar a avaliação?', 'O pedido é feito junto à Vigilância Sanitária do município, pelo canal que ela definir. Nós preparamos o projeto e a documentação e fazemos o protocolo. Como o procedimento muda de município para município, levantamos o caminho correto antes de começar.'),
   ('Qual o prazo de análise?', 'O prazo de análise é do órgão sanitário e varia. Por isso, não prometemos prazos de aprovação. O prazo de elaboração do projeto é combinado na proposta.'),
   ('É necessário elaborar novo projeto para uma reforma?', 'Depende. Na capital paulista, a DCFF acompanha pedidos de ampliação de atividades que alterem a estrutura física do estabelecimento. Em outros municípios, a regra pode ser diferente. Em reformas, avaliamos o que muda no layout e nas atividades para indicar se é preciso apresentar projeto novo ou atualizado.'),
  ],
