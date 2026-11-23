@@ -64,7 +64,7 @@ dict(
   ('O que está incluído na elaboração do PBA?', p('Cada contratação tem escopo definido por escrito. Os serviços que o Regulariza Saúde pode incluir são:') + ATUACAO + FORA, 'cta'),
   ('Qual a diferença entre projeto de interiores e projeto para Vigilância Sanitária?',
    p('Um projeto de interiores define estética, mobiliário e ambientação. Um projeto para Vigilância Sanitária é um documento técnico: demonstra que a atividade pretendida cabe no imóvel, com ambientes, fluxos, acessibilidade, acabamentos e instalações compatíveis com os requisitos sanitários aplicáveis.')
-   + p('As duas atividades são complementares e cada uma exige conhecimentos próprios. Por isso, o projeto sanitário pode ser feito em parceria com o profissional que assina os interiores. A área da saúde tem normas e rotinas específicas (controle de infecção, fluxo de pacientes e de materiais), e é aí que a especialização faz diferença.')),
+   + p('As duas atividades são complementares e cada uma exige conhecimentos próprios. Por isso, o projeto sanitário pode ser feito em parceria com o profissional que assina os interiores. A área da saúde tem normas e rotinas específicas (controle de infecção, fluxo de pacientes e de materiais), e é aí que o conhecimento específico em arquitetura da saúde faz diferença.')),
   ('Como funciona o atendimento remoto?',
    ol(['<strong>Primeiro contato.</strong> Você informa o tipo de estabelecimento, a cidade e a situação atual (vai abrir, já tem planta, recebeu exigência).',
        '<strong>Análise preliminar.</strong> Avaliamos a atividade, os CNAEs, o imóvel e os procedimentos para indicar o que provavelmente será necessário.',
