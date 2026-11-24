@@ -47,7 +47,7 @@ dict(
  title='Projeto Básico de Arquitetura (PBA) | Regulariza Saúde',
  desc='Elaboração de PBA, Memorial Descritivo Sanitário, RRT e documentação para Vigilância Sanitária de clínicas e consultórios. Solicite uma avaliação.',
  h1='Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária',
- nugget='O Projeto Básico de Arquitetura (PBA) reúne os documentos técnicos de arquitetura — desenhos e memorial descritivo — que a Vigilância Sanitária pode pedir para avaliar a estrutura física, os ambientes e os fluxos de um estabelecimento de saúde. Se ele é exigido, e em que formato, varia conforme a atividade, o risco e o município ou estado.',
+ nugget='O Projeto Básico de Arquitetura (PBA) reúne os documentos técnicos de arquitetura (desenhos e memorial descritivo) que a Vigilância Sanitária pode pedir para avaliar a estrutura física, os ambientes e os fluxos de um estabelecimento de saúde. Se ele é exigido, e em que formato, varia conforme a atividade, o risco e o município ou estado.',
  cta1='Solicitar avaliação do meu projeto', cta_mid='Entenda o que seu estabelecimento precisa', cta_mid_btn='Veja o que o seu caso precisa', cta_end='Solicitar avaliação do meu projeto',
  msg='Olá! Gostaria de uma avaliação e orçamento para elaboração de Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária.\n\nCidade/UF: ',
  service='Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária',
@@ -313,7 +313,7 @@ def render(pg):
 <h1 class="serif">{pg['h1']}</h1>
 <p class="nugget">{pg['nugget']}</p>
 <div class="hero-actions">{wa_link("btn btn-accent", pg["cta1"] + "", pg, "topo")}</div>
-<p class="micro-note">Atendimento remoto para todo o Brasil, conforme a viabilidade técnica do caso.</p>
+<p class="micro-note">Atendimento remoto em todo o Brasil.</p>
 </div></section>
 {''.join(secs)}
 <section class="section prose-section" id="faq"><div class="wrap"><div class="prose"><h2 class="serif">Perguntas frequentes</h2><div class="faq-list">{faq}</div></div></div></section>
