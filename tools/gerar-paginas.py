@@ -31,14 +31,14 @@ def ul(items): return '<ul>' + ''.join(f'<li>{i}</li>' for i in items) + '</ul>'
 def ol(items): return '<ol>' + ''.join(f'<li>{i}</li>' for i in items) + '</ol>'
 
 ATUACAO = ul([
-    'Análise técnica preliminar da demanda, da atividade e do enquadramento, considerando CNAEs, imóvel e procedimentos realizados.',
-    'Elaboração ou adequação do Projeto Básico de Arquitetura (PBA), quando aplicável.',
+    'Diagnóstico do projeto, da atividade e do enquadramento, considerando CNAEs, imóvel e procedimentos realizados.',
+    'Elaboração do Projeto Básico de Arquitetura (PBA) a partir do projeto que você já tem.',
     'Memorial Descritivo Sanitário e Memorial de Atividades, conforme a necessidade do processo.',
     'Emissão de RRT referente aos serviços técnicos efetivamente contratados.',
     'Preparação da documentação técnica.',
-    'Protocolo junto à Vigilância Sanitária e acompanhamento até a primeira manifestação do órgão, quando incluídos na contratação.',
+    'Protocolo junto à Vigilância Sanitária e acompanhamento até a primeira manifestação do órgão, incluídos no serviço.',
 ])
-FORA = p('<strong>O que não faz parte do serviço:</strong> execução ou gerenciamento de obras, decoração de interiores sem relação com o escopo sanitário e pagamento ou emissão de taxas públicas em nome do cliente. O Regulariza Saúde elabora o projeto e a documentação: a análise, a decisão e a licença são sempre da Vigilância Sanitária.')
+FORA = p('<strong>O que não faz parte do serviço:</strong> execução ou gerenciamento de obras, decoração de interiores sem relação com o projeto sanitário, pagamento ou emissão de taxas públicas em nome do cliente e a resposta às exigências da Vigilância Sanitária, que é um serviço à parte, com valor combinado em proposta. O Regulariza Saúde elabora o projeto e a documentação: a análise, a decisão e a licença são sempre da Vigilância Sanitária.')
 
 PAGES = [
 # ------------------------------------------------------------------ PBA
@@ -47,8 +47,8 @@ dict(
  title='Projeto Básico de Arquitetura (PBA) | Regulariza Saúde',
  desc='Elaboração de PBA, Memorial Descritivo Sanitário, RRT e documentação para Vigilância Sanitária de clínicas e consultórios. Solicite uma avaliação.',
  h1='Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária',
- nugget='O Projeto Básico de Arquitetura (PBA) reúne os documentos técnicos de arquitetura — desenhos e memorial descritivo — que a Vigilância Sanitária pode pedir para avaliar a estrutura física, os ambientes e os fluxos de um estabelecimento de saúde. Se ele é exigido, e em que formato, varia conforme a atividade, o risco e o município ou estado.',
- cta1='Solicitar avaliação do meu projeto', cta_mid='Entenda o que seu estabelecimento precisa', cta_end='Solicitar avaliação do meu projeto',
+ nugget='O Projeto Básico de Arquitetura (PBA) reúne os documentos técnicos de arquitetura (desenhos e memorial descritivo) que a Vigilância Sanitária pode pedir para avaliar a estrutura física, os ambientes e os fluxos de um estabelecimento de saúde. Se ele é exigido, e em que formato, varia conforme a atividade, o risco e o município ou estado.',
+ cta1='Solicitar avaliação do meu projeto', cta_mid='Entenda o que seu estabelecimento precisa', cta_mid_btn='Veja o que o seu caso precisa', cta_end='Solicitar avaliação do meu projeto',
  msg='Olá! Gostaria de uma avaliação e orçamento para elaboração de Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária.\n\nCidade/UF: ',
  service='Projeto Básico de Arquitetura (PBA) para Vigilância Sanitária',
  service_desc='Elaboração ou adequação do Projeto Básico de Arquitetura, memoriais descritivos e documentação técnica para avaliação pela Vigilância Sanitária.',
@@ -61,24 +61,24 @@ dict(
    p('Dependendo da atividade, do risco e das regras locais, o PBA pode ser pedido para:')
    + ul(['clínicas médicas e consultórios;', 'clínicas e consultórios odontológicos;', 'serviços de estética, conforme os procedimentos realizados;', 'clínicas de vacinação;', 'laboratórios;', 'serviços de cirurgia ambulatorial;', 'Instituições de Longa Permanência para Idosos;', 'outros estabelecimentos assistenciais de saúde.'])
    + p('<strong>Isso não significa que todos precisam.</strong> A exigência de projeto depende do enquadramento sanitário da atividade e do procedimento da Vigilância Sanitária local. A própria RDC 51/2011 permite que os órgãos locais simplifiquem a análise para atividades de baixa complexidade. Em Minas Gerais, por exemplo, a aprovação do projeto pelo Estado se aplica a atividades de alto risco (nível de risco III), com algumas atividades dispensadas; a Vigilância Sanitária do município informa quem aprova o projeto no seu caso.')),
-  ('O que está incluído na elaboração do PBA?', p('Cada contratação tem escopo definido por escrito. Os serviços que o Regulariza Saúde pode incluir são:') + ATUACAO + FORA, 'cta'),
+  ('O que está incluído na elaboração do PBA?', p('O que será feito e o valor ficam combinados por escrito antes de começar. O serviço inclui:') + ATUACAO + FORA, 'cta'),
   ('Qual a diferença entre projeto de interiores e projeto para Vigilância Sanitária?',
-   p('Um projeto de interiores define estética, mobiliário e ambientação. Um projeto para Vigilância Sanitária é um documento técnico: demonstra que a atividade pretendida cabe no imóvel, com ambientes, fluxos, acessibilidade, acabamentos e instalações compatíveis com os requisitos sanitários aplicáveis.')
+   p('Um projeto de interiores define estética, mobiliário e ambientação. Um projeto para Vigilância Sanitária é um documento técnico: demonstra que a atividade pretendida cabe no imóvel, com ambientes, fluxos, acessibilidade, acabamentos e instalações compatíveis com os requisitos sanitários da atividade.')
    + p('As duas atividades são complementares e cada uma exige conhecimentos próprios. Por isso, o projeto sanitário pode ser feito em parceria com o profissional que assina os interiores. A área da saúde tem normas e rotinas específicas (controle de infecção, fluxo de pacientes e de materiais), e é aí que o conhecimento específico em arquitetura da saúde faz diferença.')),
   ('Como funciona o atendimento remoto?',
    ol(['<strong>Primeiro contato.</strong> Você informa o tipo de estabelecimento, a cidade e a situação atual (vai abrir, já tem planta, recebeu exigência).',
-       '<strong>Análise preliminar.</strong> Avaliamos a atividade, os CNAEs, o imóvel e os procedimentos para indicar o que provavelmente será necessário.',
-       '<strong>Proposta.</strong> Você recebe o escopo, os entregáveis, as condições comerciais e o prazo de elaboração.',
+       '<strong>Diagnóstico.</strong> Eu avalio o projeto, a atividade, os CNAEs, o imóvel e os procedimentos para indicar o que provavelmente será necessário.',
+       '<strong>Proposta.</strong> Você recebe por escrito o que será feito, as condições comerciais e o prazo do meu trabalho.',
        '<strong>Documentos.</strong> Você envia planta ou levantamento do imóvel, fotos, medidas, o contrato ou a matrícula, quando houver, e o relatório de exigências, se existir.',
-       '<strong>Projeto e documentação.</strong> Elaboramos o PBA, os memoriais e o RRT, conforme o escopo contratado.',
-       '<strong>Protocolo e acompanhamento.</strong> Quando contratados, protocolamos e acompanhamos até a primeira manifestação da Vigilância Sanitária.'])
-   + p('<strong>Limitações do formato remoto:</strong> o trabalho depende de planta ou levantamento métrico confiável do imóvel e das diretrizes da Vigilância Sanitária local. Se os dados não estiverem confiáveis, indicamos o que precisa ser levantado antes de seguir.')),
+       '<strong>Projeto e documentação.</strong> Eu elaboro o PBA, os memoriais e o RRT, como combinado na proposta.',
+       '<strong>Protocolo e acompanhamento.</strong> Incluídos no serviço: eu faço o protocolo e acompanho até a primeira manifestação da Vigilância Sanitária. Responder a exigências é um serviço à parte.'])
+   + p('<strong>Limitações do formato remoto:</strong> o trabalho depende de planta ou levantamento métrico confiável do imóvel e das diretrizes da Vigilância Sanitária local. Se os dados não estiverem confiáveis, eu indico o que precisa ser levantado antes de seguir.')),
  ],
  faq=[
-  ('Toda clínica precisa de PBA?', 'Não necessariamente. A exigência depende do enquadramento da atividade (que considera o CNAE e os procedimentos realizados) e das regras da Vigilância Sanitária do município ou do estado. Por isso o primeiro passo é uma análise preliminar do seu caso.'),
+  ('Toda clínica precisa de PBA?', 'Não necessariamente. A exigência depende do enquadramento da atividade (que considera o CNAE e os procedimentos realizados) e das regras da Vigilância Sanitária do município ou do estado. Por isso o primeiro passo é o diagnóstico do seu caso.'),
   ('Quem pode elaborar um PBA?', 'É um projeto de arquitetura e engenharia, que deve ser assinado por profissional habilitado, com a responsabilidade técnica registrada em RRT (arquitetos, no CAU) ou ART (engenheiros, no CREA). Os órgãos de Minas Gerais e de São Paulo (capital) pedem esse registro. Confirme sempre a exigência da Vigilância Sanitária local.'),
-  ('Posso utilizar a planta arquitetônica existente?', 'Em muitos casos a planta existente é o ponto de partida, mas ela precisa representar o imóvel como ele é e permitir mostrar os ambientes, fluxos e acabamentos que a análise sanitária considera. Na análise preliminar verificamos se ela serve como base ou se será preciso levantar o imóvel novamente.'),
-  ('Quanto custa um projeto para Vigilância Sanitária?', 'Não existe valor único. O custo depende da área, da atividade e dos procedimentos, do estado da documentação, de quais serviços serão contratados (PBA, memoriais, RRT, protocolo, acompanhamento) e do município ou estado. Você recebe uma proposta por escrito depois da análise do caso. Taxas públicas, quando existirem, são separadas e pagas pelo próprio cliente.'),
+  ('Posso utilizar a planta arquitetônica existente?', 'Em muitos casos a planta existente é o ponto de partida, mas ela precisa representar o imóvel como ele é e permitir mostrar os ambientes, fluxos e acabamentos que a análise sanitária considera. No diagnóstico eu verifico se ela serve como base ou se será preciso levantar o imóvel novamente.'),
+  ('Quanto custa um projeto para Vigilância Sanitária?', 'Não existe valor único. O custo depende da área, da atividade e dos procedimentos, do estado da documentação, de quais serviços serão contratados (diagnóstico, PBA, resposta a exigências) e do município ou estado. Você recebe uma proposta por escrito depois do diagnóstico do caso. O valor do diagnóstico pode ser abatido se você contratar o PBA. Taxas públicas, quando existirem, são separadas e pagas pelo próprio cliente.'),
   ('Quanto tempo demora o processo de aprovação?', 'São dois prazos distintos. O prazo de elaboração do projeto é combinado na proposta. O prazo de análise e a decisão pertencem à Vigilância Sanitária e variam por órgão. Nenhum profissional pode garantir aprovação, prazo de análise ou licença.'),
  ],
  related=[('LTA e avaliação físico-funcional em São Paulo', '/laudo-tecnico-de-avaliacao-lta-sao-paulo/'), ('Projeto para Vigilância Sanitária em Minas Gerais', '/projeto-arquitetonico-vigilancia-sanitaria-mg/'), ('Consultórios e clínicas odontológicas', '/projeto-vigilancia-sanitaria-consultorio-odontologico/'), ('Clínicas de estética', '/projeto-vigilancia-sanitaria-clinica-estetica/')],
@@ -91,7 +91,7 @@ dict(
  desc='Projeto, documentação técnica e protocolo para a avaliação físico-funcional (LTA/DCFF) de estabelecimentos de saúde em São Paulo. Atendimento remoto.',
  h1='Laudo Técnico de Avaliação (LTA) para Vigilância Sanitária em São Paulo',
  nugget='No Estado de São Paulo, o Laudo Técnico de Avaliação (LTA) é a decisão da Vigilância Sanitária sobre a avaliação físico-funcional do projeto de uma edificação que abriga atividade de interesse da saúde. A Regulariza Saúde elabora o projeto e a documentação técnica e faz o protocolo do pedido; a emissão do LTA é sempre do órgão sanitário.',
- cta1='Solicitar orçamento do projeto para LTA/DCFF', cta_mid='Descubra quais documentos podem ser necessários', cta_end='Solicitar orçamento para LTA ou DCFF',
+ cta1='Solicitar orçamento para LTA/DCFF', cta_mid='Descubra quais documentos podem ser necessários', cta_mid_btn='Veja os documentos do caso', cta_end='Solicitar orçamento para LTA ou DCFF',
  msg='Olá! Preciso de orientação e orçamento para projeto, documentação e protocolo de LTA ou DCFF de um estabelecimento de saúde. Gostaria de entender os documentos e as etapas necessários.\n\nCidade/UF: ',
  service='Projeto, documentação técnica e protocolo para avaliação físico-funcional (LTA/DCFF)',
  service_desc='Elaboração do projeto arquitetônico, dos memoriais e do RRT, organização da documentação e protocolo do pedido de avaliação físico-funcional (LTA) ou de DCFF na Vigilância Sanitária, com atendimento remoto.',
@@ -111,21 +111,21 @@ dict(
    + p('<strong>Quem elabora o projeto e a documentação técnica</strong> é um profissional habilitado, com responsabilidade técnica registrada em ART ou RRT. A Prefeitura de São Paulo, por exemplo, pede a ART ou o RRT do profissional de engenharia ou arquitetura responsável pelo projeto físico.')
    + p('O Regulariza Saúde atua nessa etapa: projeto arquitetônico, memoriais, RRT, organização da documentação e <strong>protocolo do pedido</strong> na Vigilância Sanitária.')),
   ('Atendimento remoto em todo o Brasil, com projetos em São Paulo',
-   p('O atendimento é remoto e abrange o Brasil inteiro; esta página trata do Estado de São Paulo. Atendemos estabelecimentos em municípios paulistas como São Paulo, Campinas, Guarulhos, Barueri, Osasco, Jundiaí, Ribeirão Preto, São José do Rio Preto, Santos, São Bernardo do Campo e Sorocaba, entre outros.')
-   + p('<strong>Os municípios não seguem, necessariamente, o mesmo fluxo de protocolo ou os mesmos documentos.</strong> A capital, por exemplo, adota a DCFF. Antes de começar, levantamos com a Vigilância Sanitária do seu município como o pedido deve ser feito.'), 'cta'),
+   p('O atendimento é remoto e abrange o Brasil inteiro; esta página trata do Estado de São Paulo. Atendo estabelecimentos em municípios paulistas como São Paulo, Campinas, Guarulhos, Barueri, Osasco, Jundiaí, Ribeirão Preto, São José do Rio Preto, Santos, São Bernardo do Campo e Sorocaba, entre outros.')
+   + p('<strong>Os municípios não seguem, necessariamente, o mesmo fluxo de protocolo ou os mesmos documentos.</strong> A capital, por exemplo, adota a DCFF. Antes de começar, eu levanto com a Vigilância Sanitária do seu município como o pedido deve ser feito.'), 'cta'),
   ('Quais documentos podem ser necessários?',
    p('Depende da atividade, do porte e do município. Na capital, os documentos da DCFF estão na seção acima. Nos demais municípios, eles seguem a portaria estadual e a orientação do órgão local.')
    + p('Além deles, normalmente precisamos de planta ou levantamento do imóvel, fotos e a descrição das atividades e procedimentos.')),
   ('Como funciona o trabalho até a primeira manifestação da VISA?',
-   ol(['Análise preliminar da atividade, do imóvel e do município.', 'Proposta com escopo, entregáveis e condições comerciais.', 'Elaboração do projeto, dos memoriais e do RRT, conforme o escopo.', 'Organização da documentação e protocolo do pedido na Vigilância Sanitária.', 'Acompanhamento até a primeira manifestação do órgão sanitário, quando contratado.'])
+   ol(['Diagnóstico da atividade, do imóvel e do município.', 'Proposta por escrito, com o que será feito e as condições comerciais.', 'Elaboração do projeto, dos memoriais e do RRT, como combinado na proposta.', 'Organização da documentação e protocolo do pedido na Vigilância Sanitária.', 'Acompanhamento até a primeira manifestação do órgão sanitário, incluído no serviço.'])
    + p('A primeira manifestação, o prazo de análise e a decisão são da Vigilância Sanitária. O que acontece depois (novas rodadas de ajuste, por exemplo) é tratado conforme o que a proposta definir.') + FORA),
  ],
  faq=[
   ('Quem pode elaborar o LTA?', 'O LTA é emitido pela Vigilância Sanitária competente, e não elaborado por arquiteto ou engenheiro. O projeto e a documentação técnica que o órgão avalia são elaborados por profissional habilitado, com ART ou RRT.'),
   ('Quais documentos são necessários?', 'Depende da atividade e do município. Na capital, a Prefeitura de São Paulo lista a DCFF, a ART ou o RRT do responsável pelo projeto físico e o Memorial Descritivo de Atividades. Nos outros municípios, confirme com a Vigilância Sanitária local.'),
-  ('Como solicitar a avaliação?', 'O pedido é feito junto à Vigilância Sanitária do município, pelo canal que ela definir. Nós preparamos o projeto e a documentação e fazemos o protocolo. Como o procedimento muda de município para município, levantamos o caminho correto antes de começar.'),
+  ('Como solicitar a avaliação?', 'O pedido é feito junto à Vigilância Sanitária do município, pelo canal que ela definir. Eu preparo o projeto e a documentação e faço o protocolo. Como o procedimento muda de município para município, levanto o caminho correto antes de começar.'),
   ('Qual o prazo de análise?', 'O prazo de análise é do órgão sanitário e varia. Por isso, não prometemos prazos de aprovação. O prazo de elaboração do projeto é combinado na proposta.'),
-  ('É necessário elaborar novo projeto para uma reforma?', 'Depende. Na capital paulista, a DCFF acompanha pedidos de ampliação de atividades que alterem a estrutura física do estabelecimento. Em outros municípios, a regra pode ser diferente. Em reformas, avaliamos o que muda no layout e nas atividades para indicar se é preciso apresentar projeto novo ou atualizado.'),
+  ('É necessário elaborar novo projeto para uma reforma?', 'Depende. Na capital paulista, a DCFF acompanha pedidos de ampliação de atividades que alterem a estrutura física do estabelecimento. Em outros municípios, a regra pode ser diferente. Em reformas, eu avalio o que muda no layout e nas atividades para indicar se é preciso apresentar projeto novo ou atualizado.'),
  ],
  related=[('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/'), ('Projeto para Vigilância Sanitária em Minas Gerais', '/projeto-arquitetonico-vigilancia-sanitaria-mg/')],
  sources=[F_CVS1, F_SP],
@@ -153,18 +153,18 @@ dict(
    + ul(['relatório técnico ou memorial descritivo (objetivos e atividades, especificação básica dos acabamentos, descrição dos sistemas de ventilação mecânica e ar condicionado, quando previstos);', 'projeto arquitetônico básico de acordo com as normas da ABNT e com as leis e normas municipais, estaduais e federais;', 'memória de cálculo das áreas a adequar, reformar, construir ou ampliar, quando o estabelecimento não for isento da taxa de análise;', 'ART (CREA) ou RRT (CAU) de autoria do projeto, quitada;', 'Termo de Ciência do Proprietário e Termo de Responsabilidade Técnica, nos modelos da SES-MG.'])
    + p('A taxa de análise é gerada pelo próprio sistema e paga pelo requerente: ela não faz parte do serviço do Regulariza Saúde. Em processos municipais, a lista pode ser diferente.'), 'cta'),
   ('Atendimento em Belo Horizonte, Uberlândia e interior de Minas Gerais',
-   p('O atendimento é remoto e cobre Belo Horizonte, Uberlândia e o interior de Minas Gerais. <strong>Os municípios não têm necessariamente procedimentos idênticos:</strong> alguns publicam formulários próprios e, em alguns casos, a análise é feita pelo órgão municipal. Antes de preparar a documentação, levantamos como o seu município conduz o processo.')
+   p('O atendimento é remoto e cobre Belo Horizonte, Uberlândia e o interior de Minas Gerais. <strong>Os municípios não têm necessariamente procedimentos idênticos:</strong> alguns publicam formulários próprios e, em alguns casos, a análise é feita pelo órgão municipal. Antes de preparar a documentação, eu levanto como o seu município conduz o processo.')
    + ATUACAO),
   ('Como funciona o acompanhamento até a primeira manifestação da VISA?',
-   ol(['Análise preliminar do estabelecimento, da atividade (CNAE) e do município.', 'Definição de quem aprova o projeto, com base na orientação da Vigilância Sanitária municipal.', 'Elaboração do projeto, dos memoriais e do RRT.', 'Preparação da documentação e, quando contratado, protocolo.', 'Acompanhamento até a primeira manifestação do órgão sanitário, quando contratado.'])
+   ol(['Diagnóstico do estabelecimento, da atividade (CNAE) e do município.', 'Definição de quem aprova o projeto, com base na orientação da Vigilância Sanitária municipal.', 'Elaboração do projeto, dos memoriais e do RRT.', 'Preparação da documentação e protocolo, incluído no serviço.', 'Acompanhamento até a primeira manifestação do órgão sanitário, incluído no serviço.'])
    + p('O prazo de análise e a decisão são da Vigilância Sanitária. Novas rodadas de ajuste depois da primeira manifestação são tratadas conforme a proposta contratada.') + FORA),
  ],
  faq=[
-  ('Como saber se minha clínica precisa apresentar projeto?', 'Pela classificação de risco da atividade (que considera o CNAE) e pela orientação da Vigilância Sanitária do seu município. A aprovação estadual de projeto se aplica a atividades de alto risco, com algumas dispensadas. Fazemos essa análise preliminar para o seu caso.'),
+  ('Como saber se minha clínica precisa apresentar projeto?', 'Pela classificação de risco da atividade (que considera o CNAE) e pela orientação da Vigilância Sanitária do seu município. A aprovação estadual de projeto se aplica a atividades de alto risco, com algumas dispensadas. Eu faço esse diagnóstico para o seu caso.'),
   ('O procedimento é municipal ou estadual?', 'Pode ser os dois. A Vigilância Sanitária municipal orienta se o pedido deve ir ao Estado; quando vai, é feito no VISA Digital. A inspeção e outras etapas do licenciamento podem permanecer com o município.'),
   ('O que é o RAPA?', 'É o módulo do sistema VISA Digital, da Secretaria de Estado de Saúde de Minas Gerais, para solicitar a avaliação de projeto arquitetônico. Não se aplica a todos os estabelecimentos nem a todos os municípios.'),
   ('Posso utilizar uma planta existente?', 'Em muitos casos ela é o ponto de partida, desde que represente o imóvel como ele é. O pedido exige projeto arquitetônico básico de acordo com as normas da ABNT e o memorial descritivo. Verificamos se a planta existente serve ou precisa ser refeita.'),
-  ('O que acontece quando a Vigilância Sanitária solicita alterações?', 'O órgão pode pedir ajustes no projeto ou na documentação. Quando o acompanhamento está contratado, analisamos a manifestação e indicamos as adequações. Eventuais rodadas adicionais seguem as condições da proposta.'),
+  ('O que acontece quando a Vigilância Sanitária solicita alterações?', 'O órgão pode pedir ajustes no projeto ou na documentação. O acompanhamento até a primeira manifestação está incluído no serviço. Responder às exigências é um serviço à parte, com valor combinado em proposta.'),
  ],
  related=[('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/'), ('Consultórios e clínicas odontológicas', '/projeto-vigilancia-sanitaria-consultorio-odontologico/'), ('Clínicas de estética', '/projeto-vigilancia-sanitaria-clinica-estetica/')],
  sources=[F_MG, F_NT160],
@@ -175,8 +175,8 @@ dict(
  title='Projeto para Vigilância Sanitária Odontológica | Regulariza Saúde',
  desc='Projeto arquitetônico e documentação para consultórios e clínicas odontológicas. Avaliação de processamento de materiais, fluxos e requisitos sanitários.',
  h1='Projeto Arquitetônico para Consultórios e Clínicas Odontológicas',
- nugget='A RDC 1002/2025, da Anvisa, passou a regular os serviços que prestam assistência odontológica e classifica os consultórios por estrutura física e equipamentos. Se um consultório precisa apresentar projeto à Vigilância Sanitária depende do enquadramento, da atividade e das regras do órgão local, e a análise preliminar mostra o que se aplica ao seu caso.',
- cta1='Solicitar avaliação do consultório odontológico', cta_mid='Entenda o que seu consultório precisa', cta_end='Solicitar avaliação do consultório odontológico',
+ nugget='A RDC 1002/2025, da Anvisa, passou a regular os serviços que prestam assistência odontológica e classifica os consultórios por estrutura física e equipamentos. Se um consultório precisa apresentar projeto à Vigilância Sanitária depende do enquadramento, da atividade e das regras do órgão local, e o diagnóstico mostra o que vale para o seu caso.',
+ cta1='Solicitar avaliação odontológica', cta_mid='Entenda o que seu consultório precisa', cta_mid_btn='Veja o que o consultório precisa', cta_end='Solicitar avaliação odontológica',
  msg='Olá! Tenho um consultório/clínica odontológica e preciso de orientação sobre projeto arquitetônico e documentação para Vigilância Sanitária.',
  service='Projeto arquitetônico e documentação para consultórios e clínicas odontológicas',
  service_desc='Elaboração de projeto arquitetônico, memoriais e documentação técnica para consultórios e clínicas odontológicas, conforme a RDC 1002/2025 e as regras da Vigilância Sanitária local.',
@@ -187,20 +187,20 @@ dict(
   ('Quais aspectos técnicos merecem atenção em uma clínica odontológica?',
    p('Cada consultório tem uma realidade própria. Em geral, o projeto deve considerar:')
    + ul(['<strong>Processamento de produtos para saúde:</strong> onde e como os instrumentais são limpos, desinfetados ou esterilizados, e o fluxo unidirecional entre área suja e área limpa;', '<strong>Fluxos</strong> de pacientes, profissionais, materiais e resíduos;', '<strong>Ambiente de assistência</strong> e equipamentos, conforme a classe do consultório;', '<strong>Radiologia</strong>, quando houver equipamento de raio-X, com requisitos próprios de proteção radiológica;', '<strong>Acessibilidade</strong> e sanitários;', '<strong>Instalações e acabamentos</strong> adequados à limpeza.'])
-   + p('Os ambientes e a estrutura mudam conforme a classe do consultório e os procedimentos. <strong>Não há um conjunto de ambientes obrigatório igual para todos</strong> e este site não publica metragens mínimas: elas dependem da norma aplicável ao seu caso e da orientação do órgão local.')),
+   + p('Os ambientes e a estrutura mudam conforme a classe do consultório e os procedimentos. <strong>Não há um conjunto de ambientes obrigatório igual para todos</strong> e este site não publica metragens mínimas: elas dependem da norma que vale para o seu caso e da orientação do órgão local.')),
   ('Processamento de materiais: como funciona a análise (a “CME odontológica”)?',
    p('Muitos profissionais chamam a área de limpeza e esterilização de “CME”. A Anvisa esclarece que a nomenclatura CME (Centro de Material e Esterilização) não se aplica à realidade ambulatorial dos serviços odontológicos: a RDC 1002/2025 fala em ambientes de processamento de produtos para saúde.')
    + p('A norma prevê três alternativas de estrutura: bancada setorizada exclusiva dentro da área de assistência, sala única e exclusiva para processamento, ou duas salas (suja e limpa). Consultórios coletivos e centros cirúrgicos odontológicos não podem usar a bancada setorizada. O serviço também pode terceirizar o processamento com empresa regularizada junto à autoridade sanitária, e nesse caso o protocolo precisa estar documentado.')
-   + p('Na elaboração do projeto, verificamos qual alternativa é viável no seu imóvel e como demonstrá-la nas plantas e no memorial.'), 'cta'),
+   + p('Na elaboração do projeto, eu verifico qual alternativa é viável no seu imóvel e como demonstrá-la nas plantas e no memorial.'), 'cta'),
   ('Quais documentos são necessários?',
    p('Depende do órgão sanitário local. Em geral, o processo pode reunir o projeto arquitetônico, o memorial descritivo e de atividades, o RRT ou a ART do autor do projeto e os formulários do município ou do estado. Para consultórios já licenciados, a Anvisa informa que os serviços devem se adequar à RDC 1002/2025 no prazo de 360 dias contado da publicação da norma, inclusive quanto à estrutura física, salvo impossibilidades técnicas analisadas caso a caso. Confirme a data com a sua Vigilância Sanitária.')),
   ('Como o Regulariza Saúde pode ajudar?', ATUACAO + FORA),
  ],
  faq=[
-  ('Consultório odontológico com uma cadeira precisa de projeto?', 'Depende da Vigilância Sanitária local. A RDC 1002/2025 se aplica a todo serviço que presta assistência odontológica, mas a exigência de apresentar projeto e o seu formato dependem do enquadramento e do órgão responsável. A análise preliminar indica o que se aplica ao seu caso.'),
+  ('Consultório odontológico com uma cadeira precisa de projeto?', 'Depende da Vigilância Sanitária local. A RDC 1002/2025 se aplica a todo serviço que presta assistência odontológica, mas a exigência de apresentar projeto e o seu formato dependem do enquadramento e do órgão responsável. O diagnóstico indica o que vale para o seu caso.'),
   ('Como organizar o processamento de instrumentais?', 'A RDC 1002/2025 prevê bancada setorizada exclusiva na área de assistência, sala única exclusiva ou duas salas (suja e limpa). Consultórios coletivos e centros cirúrgicos odontológicos não podem usar a bancada. O processamento também pode ser terceirizado com empresa regularizada.'),
-  ('É necessário ter expurgo?', 'A RDC 1002/2025 não impõe um modelo único. O que a norma exige é um fluxo organizado entre área suja e área limpa, dentro de uma das alternativas de estrutura de processamento. A escolha é feita pelo serviço, conforme sua demanda e a viabilidade do imóvel.'),
-  ('Quais cuidados devem ser observados na sala de raio-X?', 'Se houver equipamento de raio-X, existem requisitos específicos de proteção radiológica, que dependem do equipamento e das normas aplicáveis, e devem ser confirmados com um profissional da área e com a Vigilância Sanitária. No projeto, a sala é prevista como ambiente próprio com localização e fluxos compatíveis.'),
+  ('É necessário ter expurgo?', 'A RDC 1002/2025 não impõe um modelo único. O que a norma exige é um fluxo organizado entre área suja e área limpa, dentro de uma das alternativas de estrutura de processamento. A escolha é feita pelo serviço, conforme a necessidade do serviço e a viabilidade do imóvel.'),
+  ('Quais cuidados devem ser observados na sala de raio-X?', 'Se houver equipamento de raio-X, existem requisitos específicos de proteção radiológica, que dependem do equipamento e das normas vigentes, e devem ser confirmados com um profissional da área e com a Vigilância Sanitária. No projeto, a sala é prevista como ambiente próprio com localização e fluxos compatíveis.'),
   ('Posso reformar meu consultório sem apresentar novo projeto?', 'Depende. A Anvisa observa que a Vigilância Sanitária local pode dispensar a avaliação de um novo projeto, principalmente em adequações pequenas e de baixo risco sanitário, avaliadas caso a caso. Reformas que mudem fluxos, ambientes ou o tipo de atendimento costumam exigir avaliação.'),
  ],
  related=[('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/'), ('Clínicas de estética', '/projeto-vigilancia-sanitaria-clinica-estetica/')],
@@ -213,7 +213,7 @@ dict(
  desc='Projetos arquitetônicos e documentação técnica para clínicas de estética. Avaliação conforme procedimentos realizados e exigências sanitárias.',
  h1='Projeto Arquitetônico para Clínicas de Estética e Procedimentos Estéticos',
  nugget='O enquadramento sanitário de uma clínica de estética depende dos procedimentos realizados, e o licenciamento e a inspeção são, em regra, das vigilâncias sanitárias estaduais, distrital e municipais. A Anvisa reavalia o tema desde setembro de 2026. Por isso, o primeiro passo é conferir os procedimentos e a posição do órgão local.',
- cta1='Solicitar avaliação da minha clínica de estética', cta_mid='Solicite uma avaliação técnica', cta_end='Solicitar avaliação da minha clínica de estética',
+ cta1='Solicitar avaliação de estética', cta_mid='Solicite uma avaliação técnica', cta_end='Solicitar avaliação de estética',
  msg='Olá! Tenho uma clínica de estética e gostaria de avaliar a necessidade de projeto arquitetônico e documentação para Vigilância Sanitária. Gostaria de informar os procedimentos realizados e receber orientação.',
  service='Projeto arquitetônico e documentação para clínicas de estética',
  service_desc='Elaboração de projeto arquitetônico, memoriais e documentação técnica para clínicas de estética, conforme os procedimentos realizados e as exigências da Vigilância Sanitária local.',
@@ -224,25 +224,66 @@ dict(
    + p('Na prática, procedimentos que envolvem produtos injetáveis, agulhas ou outros atos invasivos tendem a ser analisados com mais rigor pelas vigilâncias locais. Esse enquadramento é decidido caso a caso pelo órgão sanitário e deve ser conferido antes de investir em reforma ou projeto.')),
   ('Quais aspectos arquitetônicos devem ser avaliados?',
    p('Conforme a atividade, o projeto costuma tratar de:')
-   + ul(['organização dos ambientes e separação de áreas;', 'lavatório para higienização das mãos;', 'fluxos de atendimento, de materiais e de resíduos;', 'limpeza e processamento de materiais, quando houver;', 'armazenamento de produtos e materiais;', 'descarte de resíduos e, quando aplicável, de perfurocortantes;', 'revestimentos e instalações compatíveis com a limpeza;', 'acessibilidade.'])
-   + p('Quais desses itens são obrigatórios e como devem ser feitos depende do procedimento e do órgão local. Para serviços de saúde, a Anvisa cita, entre outras, a RDC 63/2011 (boas práticas de funcionamento) e a RDC 222/2018 (resíduos de serviços de saúde). Não generalizamos exigências: avaliamos o seu caso.')),
+   + ul(['organização dos ambientes e separação de áreas;', 'lavatório para higienização das mãos;', 'fluxos de atendimento, de materiais e de resíduos;', 'limpeza e processamento de materiais, quando houver;', 'armazenamento de produtos e materiais;', 'descarte de resíduos e, quando houver, de perfurocortantes;', 'revestimentos e instalações compatíveis com a limpeza;', 'acessibilidade.'])
+   + p('Quais desses itens são obrigatórios e como devem ser feitos depende do procedimento e do órgão local. Para serviços de saúde, a Anvisa cita, entre outras, a RDC 63/2011 (boas práticas de funcionamento) e a RDC 222/2018 (resíduos de serviços de saúde). Não generalizo exigências: eu avalio o seu caso.')),
   ('Já abriu sua clínica e recebeu uma exigência da Vigilância Sanitária?',
-   p('É comum. O primeiro passo é ler o relatório com calma e separar o que é ajuste de projeto do que é rotina do serviço (documentos, treinamentos, protocolos). Na parte arquitetônica, avaliamos a planta existente, comparamos com o que o órgão apontou e propomos as adequações necessárias, para que o projeto e a documentação respondam às exigências.')
+   p('É comum. O primeiro passo é ler o relatório com calma e separar o que é ajuste de projeto do que é rotina do serviço (documentos, treinamentos, protocolos). Na parte arquitetônica, eu avalio a planta existente, comparo com o que o órgão apontou e proponho as adequações necessárias, para que o projeto e a documentação respondam às exigências.')
    + p('A resposta, a análise e a decisão pertencem à Vigilância Sanitária, e não é possível garantir o resultado.'), 'cta'),
   ('Quais documentos podem ser necessários?',
    p('Dependem do enquadramento. Em geral, o processo pode reunir o projeto arquitetônico (quando exigido), o memorial descritivo e de atividades, o RRT do autor do projeto e os formulários do município ou do estado. Primeiro confirmamos com a Vigilância Sanitária local o que se aplica ao seu estabelecimento.')),
   ('Como funciona a contratação?',
-   ol(['Você informa os procedimentos realizados, a cidade e a situação do imóvel.', 'Fazemos a análise preliminar do enquadramento e do espaço.', 'Você recebe a proposta com escopo, entregáveis, condições comerciais e prazo de elaboração.', 'Elaboramos o projeto e a documentação conforme o escopo.', 'Quando contratados, fazemos o protocolo e o acompanhamento até a primeira manifestação do órgão.']) + ATUACAO + FORA),
+   ol(['Você informa os procedimentos realizados, a cidade e a situação do imóvel.', 'Eu faço o diagnóstico do enquadramento e do espaço.', 'Você recebe por escrito o que será feito, as condições comerciais e o prazo do meu trabalho.', 'Eu elaboro o projeto e a documentação, como combinado na proposta.', 'Eu faço o protocolo e o acompanhamento até a primeira manifestação do órgão, incluídos no serviço.']) + ATUACAO + FORA),
  ],
  faq=[
-  ('Clínica de estética precisa de PBA?', 'Depende dos procedimentos e do órgão sanitário local. Não há uma resposta única para todas as clínicas de estética. A análise preliminar do seu caso indica se é preciso projeto e em que formato.'),
+  ('Clínica de estética precisa de PBA?', 'Depende dos procedimentos e do órgão sanitário local. Não há uma resposta única para todas as clínicas de estética. O diagnóstico do seu caso indica se é preciso projeto e em que formato.'),
   ('Quais procedimentos alteram o enquadramento sanitário?', 'Quem decide é a Vigilância Sanitária do município ou do estado. Procedimentos com produtos injetáveis ou outros atos invasivos costumam ser tratados como atividade de saúde. A Anvisa reavalia o tema desde setembro de 2026, por isso confirme a posição do seu órgão local.'),
-  ('Toda sala de procedimento precisa de pia?', 'Não existe resposta única. A necessidade e o tipo de lavatório dependem do procedimento e da exigência da Vigilância Sanitária. No projeto, avaliamos onde a higienização das mãos deve ficar, conforme os procedimentos informados.'),
+  ('Toda sala de procedimento precisa de pia?', 'Não existe resposta única. A necessidade e o tipo de lavatório dependem do procedimento e da exigência da Vigilância Sanitária. No projeto, eu avalio onde a higienização das mãos deve ficar, conforme os procedimentos informados.'),
   ('Coworking de estética precisa de projeto?', 'A Anvisa informa que o licenciamento sanitário é emitido para o serviço (a estrutura compartilhada) e não individualmente para cada profissional. A necessidade de projeto depende do enquadramento e do órgão local, e o projeto considera os ambientes e fluxos compartilhados.'),
-  ('Como regularizar uma clínica que já está funcionando?', 'Começamos pelo diagnóstico: quais procedimentos são realizados, qual a situação da licença e o que o imóvel permite. Depois propomos as adequações e preparamos o projeto e a documentação exigidos pelo órgão local.'),
+  ('Como regularizar uma clínica que já está funcionando?', 'Começo pelo diagnóstico: quais procedimentos são realizados, qual a situação da licença e o que o imóvel permite. Depois proponho as adequações e preparo o projeto e a documentação exigidos pelo órgão local.'),
  ],
  related=[('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/'), ('Consultórios e clínicas odontológicas', '/projeto-vigilancia-sanitaria-consultorio-odontologico/')],
  sources=[F_EST, F_NT160, F_1002],
+),
+# ------------------------------------------------------------------ ARQUITETOS
+dict(
+ id='arquitetos', slug='parceria-tecnica-para-arquitetos', track='click_cta_arquitetos', crumb='Para arquitetos',
+ title='Parceria técnica para arquitetos: PBA para Vigilância Sanitária',
+ desc='Arquiteto ou designer com projeto de clínica ou consultório? Eu elaboro o PBA a partir do seu projeto, com memorial, RRT, protocolo e acompanhamento até a primeira manifestação.',
+ h1='Parceria técnica para arquitetos e designers de interiores',
+ nugget='Recebeu o projeto de uma clínica ou consultório e precisa levá-lo à Vigilância Sanitária? Eu elaboro o PBA a partir do seu projeto e aponto o que precisa mudar, para você não perder o cliente nem refazer obra.',
+ cta1='Conversar sobre um projeto', cta_mid='Tem um projeto de saúde em mãos', cta_mid_btn='Conversar sobre parceria', cta_end='Conversar sobre parceria técnica',
+ msg='Olá! Vim pelo site do Regulariza Saúde ARQ. Sou arquiteto(a) ou designer e gostaria de conversar sobre parceria técnica em um projeto de saúde.\n\nCidade/UF: ',
+ service='Parceria técnica para arquitetos: PBA a partir do projeto existente',
+ service_desc='Elaboração do Projeto Básico de Arquitetura (PBA) a partir do projeto do arquiteto ou designer, com memorial descritivo, RRT, protocolo e acompanhamento até a primeira manifestação da Vigilância Sanitária, com atendimento remoto.',
+ sections=[
+  ('Por que projeto de saúde pede um olhar à parte',
+   p('Projeto de clínica ou consultório precisa responder às normas sanitárias, como a RDC 50 da Anvisa, e às regras do órgão local: fluxos limpos e sujos, barreiras físicas, pontos de água, ventilação, revestimentos laváveis e memorial descritivo próprio.')
+   + p('Se você recebeu um pedido assim, não precisa recusar o cliente nem arriscar retrabalho na obra. Eu cuido da parte sanitária, e o seu projeto e a sua identidade continuam sendo o ponto de partida.')),
+  ('O que eu faço a partir do seu projeto',
+   ul(['Diagnóstico do projeto, da atividade e do município, para apontar o que precisa mudar.',
+       'Elaboração do Projeto Básico de Arquitetura (PBA) a partir do seu projeto.',
+       'Memorial Descritivo Sanitário e Memorial de Atividades, conforme o processo.',
+       'Registro do RRT no CAU em meu nome, porque assumo a responsabilidade técnica pelo PBA.',
+       'Protocolo na Vigilância Sanitária e acompanhamento até a primeira manifestação do órgão, incluídos no serviço.'])
+   + FORA, 'cta'),
+  ('Como funciona',
+   ol(['Você me conta o tipo de estabelecimento, a cidade e envia o projeto que já tem.',
+       'Eu faço o diagnóstico e aponto o que precisa mudar.',
+       'Você recebe por escrito o que será feito, o prazo do meu trabalho e o valor.',
+       'Eu elaboro o PBA e a documentação, como combinado na proposta.',
+       'Eu faço o protocolo e acompanho até a primeira manifestação da Vigilância Sanitária.'])
+   + p('Se a Vigilância apontar exigências, respondo a cada uma e ajusto o projeto e a documentação. Esse serviço é à parte, com valor combinado em proposta. Não há garantia de aprovação nem de prazo, porque a análise e a decisão são do órgão.')),
+ ],
+ faq=[
+  ('Preciso refazer o meu projeto?', 'Não necessariamente. Eu parto do projeto que você já tem e aponto o que precisa mudar para atender às normas sanitárias. O que mudar, e como, fica combinado com você.'),
+  ('Quem assume a responsabilidade técnica do PBA?', 'Eu. Registro o RRT no CAU em meu nome, porque assumo a responsabilidade técnica pelo PBA.'),
+  ('Posso contratar só o diagnóstico?', 'Sim. O diagnóstico aponta o que precisa mudar antes de elaborar o PBA. Se você contratar o PBA em seguida, o valor do diagnóstico pode ser abatido, nas condições da proposta.'),
+  ('Quanto custa?', 'O valor é definido por orçamento, depois que eu conheço o projeto, a atividade e o município. Você recebe por escrito, antes de começar.'),
+  ('A Vigilância Sanitária pediu exigências. Quem responde?', 'Eu respondo às exigências e ajusto o projeto e a documentação. É um serviço à parte, com valor combinado em proposta, e não é possível garantir a aprovação.'),
+  ('Você atende fora da minha cidade?', 'Sim. O atendimento é remoto, em todo o Brasil. O que muda de um município para outro são as exigências do órgão sanitário local, que eu confiro no diagnóstico.'),
+ ],
+ related=[('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/'), ('Vigilância Sanitária em Minas Gerais', '/projeto-arquitetonico-vigilancia-sanitaria-mg/')],
+ sources=[F_NT160, F_1002],
 ),
 ]
 
@@ -253,9 +294,9 @@ def wa_link(cls, label, pg, loc):
     return (f'<a class="{cls} whatsapp-link" href="{wa_url(pg["msg"])}" data-message="{escape(pg["msg"])}" '
             f'data-track="{pg["track"]}" data-cta-location="{loc}" target="_blank" rel="noopener noreferrer">{label}</a>')
 
-HEADER = '''<header class="topbar"><div class="wrap nav"><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-verde.svg" alt="" width="164" height="44"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menu">☰ Menu</button><nav class="navlinks" id="navlinks" aria-label="Navegação principal"><a href="/#servicos">Serviços</a><a href="/#parcerias">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a><a class="btn btn-primary mobile-cta" href="#contato">Solicitar avaliação ↗</a></nav>{cta}</div></header>'''
+HEADER = '''<header class="topbar"><div class="wrap nav"><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-verde.svg" alt="" width="164" height="44"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menu">☰ Menu</button><nav class="navlinks" id="navlinks" aria-label="Navegação principal"><a href="/#servicos">Serviços</a><a href="/parceria-tecnica-para-arquitetos/">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a><a class="btn btn-primary mobile-cta" href="#contato">Solicitar avaliação</a></nav>{cta}</div></header>'''
 
-FOOTER = '''<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-claro.svg" alt="" width="164" height="44" loading="lazy"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><p>Projetos arquitetônicos para regularização sanitária de estabelecimentos de saúde. Atendimento remoto em todo o Brasil.</p></div><nav class="footer-links" aria-label="Links do rodapé"><a href="/#servicos">Serviços</a><a href="/#parcerias">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a></nav></div><nav class="footer-links footer-guides" aria-label="Guias"><a href="/projeto-basico-de-arquitetura-pba/">PBA</a><a href="/laudo-tecnico-de-avaliacao-lta-sao-paulo/">LTA em São Paulo</a><a href="/projeto-arquitetonico-vigilancia-sanitaria-mg/">Minas Gerais</a><a href="/projeto-vigilancia-sanitaria-consultorio-odontologico/">Odontologia</a><a href="/projeto-vigilancia-sanitaria-clinica-estetica/">Estética</a></nav><div class="footer-bottom"><span>© <span id="year"></span> Laís Abreu Arquitetura LTDA · CNPJ 53.427.967/0001-10 · Regulariza Saúde · CAU nº A263615-8</span><span>Contato via WhatsApp · <a href="/privacidade.html">Política de Privacidade</a> · <button type="button" class="link-btn" data-cookies>Gerenciar cookies</button></span></div></div></footer>'''
+FOOTER = '''<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-claro.svg" alt="" width="164" height="44" loading="lazy"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><p>Projetos arquitetônicos para regularização sanitária de estabelecimentos de saúde. Atendimento remoto em todo o Brasil.</p></div><nav class="footer-links" aria-label="Links do rodapé"><a href="/#servicos">Serviços</a><a href="/parceria-tecnica-para-arquitetos/">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a></nav></div><nav class="footer-links footer-guides" aria-label="Guias"><a href="/parceria-tecnica-para-arquitetos/">Arquitetos</a><a href="/projeto-basico-de-arquitetura-pba/">PBA</a><a href="/laudo-tecnico-de-avaliacao-lta-sao-paulo/">LTA em São Paulo</a><a href="/projeto-arquitetonico-vigilancia-sanitaria-mg/">Minas Gerais</a><a href="/projeto-vigilancia-sanitaria-consultorio-odontologico/">Odontologia</a><a href="/projeto-vigilancia-sanitaria-clinica-estetica/">Estética</a></nav><div class="footer-bottom"><span>© <span id="year"></span> Laís Abreu Arquitetura LTDA, CNPJ 53.427.967/0001-10, Regulariza Saúde, CAU nº A263615-8</span><span>Contato via WhatsApp, <a href="/privacidade.html">Política de Privacidade</a>, <button type="button" class="link-btn" data-cookies>Gerenciar cookies</button></span></div></div></footer>'''
 
 def jsonld(pg, url):
     graph = [
@@ -278,7 +319,7 @@ def render(pg):
         h2, body = s[0], s[1]
         secs.append(f'<section class="section prose-section"><div class="wrap"><div class="prose"><h2 class="serif">{h2}</h2>{body}</div></div></section>')
         if len(s) > 2 and s[2] == 'cta':
-            secs.append(f'<section class="cta-band"><div class="wrap"><p class="cta-band-text">{pg["cta_mid"]}.</p>{wa_link("btn btn-accent", pg["cta_mid"] + " ↗", pg, "meio")}</div></section>')
+            secs.append(f'<section class="cta-band"><div class="wrap"><p class="cta-band-text">{pg["cta_mid"]}.</p>{wa_link("btn btn-accent", pg.get("cta_mid_btn", pg["cta_mid"]), pg, "meio")}</div></section>')
     faq = ''.join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q, a in pg['faq'])
     related = ''.join(f'<li><a href="{u}">{t}</a></li>' for t, u in pg['related'])
     sources = ''.join(f'<li><a href="{u}" rel="noopener" target="_blank">{t}</a></li>' for t, u in pg['sources'])
@@ -306,22 +347,22 @@ def render(pg):
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-{HEADER.format(cta=wa_link("btn btn-primary whatsapp-link-header", "Solicitar avaliação ↗", pg, "cabecalho"))}
+{HEADER.format(cta=wa_link("btn btn-primary whatsapp-link-header", "Solicitar avaliação", pg, "cabecalho"))}
 <main id="conteudo">
 <section class="page-hero"><div class="wrap">
 <nav class="crumbs" aria-label="Você está em"><ol><li><a href="/">Início</a></li><li aria-current="page">{pg['crumb']}</li></ol></nav>
 <h1 class="serif">{pg['h1']}</h1>
 <p class="nugget">{pg['nugget']}</p>
-<div class="hero-actions">{wa_link("btn btn-accent", pg["cta1"] + " ↗", pg, "topo")}</div>
-<p class="micro-note">Atendimento remoto para todo o Brasil, conforme a viabilidade técnica do caso.</p>
+<div class="hero-actions">{wa_link("btn btn-accent", pg["cta1"] + "", pg, "topo")}</div>
+<p class="micro-note">Atendimento remoto em todo o Brasil.</p>
 </div></section>
 {''.join(secs)}
 <section class="section prose-section" id="faq"><div class="wrap"><div class="prose"><h2 class="serif">Perguntas frequentes</h2><div class="faq-list">{faq}</div></div></div></section>
 <section class="section prose-section"><div class="wrap"><div class="prose"><h2 class="serif">Quem assina o projeto</h2>{p(AUTOR)}<h3>Veja também</h3><ul class="related">{related}</ul><h3>Fontes oficiais consultadas</h3><ul class="sources">{sources}</ul>{p(f"Conteúdo informativo, revisado em {REVISADO}. As exigências variam conforme a atividade, o município e o estado e podem mudar: confirme sempre com a Vigilância Sanitária do seu município. Este texto não substitui a orientação do órgão sanitário nem garante aprovação, prazo ou licença.")}</div></div></section>
-<section class="cta-section" id="contato"><div class="wrap cta-final"><h2 class="serif">Converse sobre a situação do seu projeto.</h2><p>Informe o tipo de estabelecimento, a cidade e a situação atual. Na primeira conversa entendemos o seu cenário, sem compromisso, para indicar o melhor caminho.</p>{wa_link("btn btn-accent", pg["cta_end"] + " ↗", pg, "final")}</div></section>
+<section class="cta-section" id="contato"><div class="wrap cta-final"><h2 class="serif">Converse sobre a situação do seu projeto.</h2><p>Informe o tipo de estabelecimento, a cidade e a situação atual. Na primeira conversa entendemos o seu cenário, sem compromisso, para indicar o melhor caminho.</p>{wa_link("btn btn-accent", pg["cta_end"] + "", pg, "final")}</div></section>
 </main>
 {FOOTER}
-{wa_link("btn btn-primary floating-cta", "Solicitar avaliação ↗", pg, "flutuante").replace('<a ', '<a aria-label="Solicitar avaliação pelo WhatsApp" ', 1)}
+{wa_link("btn btn-primary floating-cta", "Solicitar avaliação", pg, "flutuante").replace('<a ', '<a aria-label="Solicitar avaliação pelo WhatsApp" ', 1)}
 <script src="/assets/js/config.js"></script><script src="/assets/js/track.js"></script><script src="/assets/js/page.js"></script>
 </body>
 </html>
