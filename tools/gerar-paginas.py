@@ -285,6 +285,36 @@ dict(
  related=[('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/'), ('Vigilância Sanitária em Minas Gerais', '/projeto-arquitetonico-vigilancia-sanitaria-mg/')],
  sources=[F_NT160, F_1002],
 ),
+# ------------------------------------------------------------------ PBA ODONTOLOGIA (página de anúncio)
+dict(
+ id='pba-odonto', slug='pba/odontologia', track='click_cta_pba_odonto', crumb='PBA para odontologia', robots='noindex,follow',
+ title='PBA para Consultório e Clínica Odontológica | Regulariza Saúde',
+ desc='Eu elaboro o PBA a partir do projeto da sua clínica odontológica, com memorial, RRT, protocolo e acompanhamento até a primeira manifestação da Vigilância Sanitária.',
+ h1='PBA para consultórios e clínicas odontológicas',
+ nugget='Eu elaboro o Projeto Básico de Arquitetura (PBA) a partir do projeto da sua clínica, com memorial descritivo, protocolo e acompanhamento até a primeira manifestação da Vigilância Sanitária.',
+ cta1='Pedir diagnóstico pelo WhatsApp', cta_mid='Envie a planta da sua clínica', cta_mid_btn='Enviar planta pelo WhatsApp', cta_end='Pedir diagnóstico pelo WhatsApp',
+ msg='Olá! Vim pelo site do Regulariza Saúde ARQ. Tenho um consultório/clínica odontológica e gostaria de um diagnóstico e orçamento para o PBA.\n\nCidade/UF: ',
+ service='PBA para consultórios e clínicas odontológicas',
+ service_desc='Elaboração do Projeto Básico de Arquitetura (PBA) a partir do projeto de consultórios e clínicas odontológicas, com memorial descritivo, RRT, protocolo e acompanhamento até a primeira manifestação da Vigilância Sanitária, com atendimento remoto.',
+ sections=[
+  ('O que eu faço pela sua clínica', ATUACAO + FORA),
+  ('O que o projeto de uma clínica odontológica costuma tratar',
+   p('Cada consultório tem uma realidade própria. Em geral, o projeto considera:')
+   + ul(['<strong>Processamento de produtos para saúde:</strong> onde e como os instrumentais são limpos, desinfetados ou esterilizados, e o fluxo entre área suja e área limpa;', '<strong>Fluxos</strong> de pacientes, profissionais, materiais e resíduos;', '<strong>Ambiente de assistência</strong> e equipamentos, conforme a classe do consultório;', '<strong>Radiologia</strong>, quando houver raio-X;', '<strong>Acessibilidade</strong> e sanitários;', '<strong>Instalações e acabamentos</strong> adequados à limpeza.'])
+   + p('Os ambientes e a estrutura mudam conforme a classe do consultório e os procedimentos. Não há um conjunto de ambientes obrigatório igual para todos, e as regras do órgão sanitário local também contam. Eu confiro isso no diagnóstico.'), 'cta'),
+  ('Como funciona',
+   ol(['Você me conta a cidade, o tipo de consultório e envia o projeto que já tem.', 'Eu faço o diagnóstico e aponto o que precisa mudar.', 'Você recebe por escrito o que será feito, o prazo do meu trabalho e o valor.', 'Eu elaboro o PBA, o memorial e a documentação, como combinado na proposta.', 'Eu faço o protocolo e acompanho até a primeira manifestação da Vigilância Sanitária.'])
+   + p('Se a Vigilância apontar exigências, respondo a cada uma e ajusto o projeto e a documentação. Esse serviço é à parte, com valor combinado em proposta. Não há garantia de aprovação nem de prazo, porque a análise e a decisão são do órgão.')),
+ ],
+ faq=[
+  ('Já tenho o projeto da clínica. Você faz o PBA a partir dele?', 'Sim. Eu parto do projeto que você já tem e aponto o que precisa mudar. Como assumo a responsabilidade técnica pelo PBA, registro o RRT no CAU em meu nome.'),
+  ('Preciso de projeto para abrir ou reformar o consultório?', 'Depende do enquadramento da atividade e da Vigilância Sanitária do seu município ou estado. O diagnóstico indica se é preciso apresentar projeto e em que formato.'),
+  ('Quanto custa?', 'O valor é definido por orçamento, depois que eu conheço o projeto e o município. Você recebe por escrito, antes de começar.'),
+  ('A Vigilância pediu exigências. Quem responde?', 'Eu respondo às exigências e ajusto o projeto e a documentação. É um serviço à parte, com valor combinado em proposta, e não é possível garantir a aprovação.'),
+ ],
+ related=[('Guia para consultórios odontológicos', '/projeto-vigilancia-sanitaria-consultorio-odontologico/'), ('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/')],
+ sources=[F_1002, F_NT160],
+),
 ]
 
 # ---------------------------------------------------------------------------------------------
@@ -330,7 +360,7 @@ def render(pg):
   <title>{escape(pg['title'])}</title>
   <meta name="description" content="{escape(pg['desc'])}">
   <link rel="canonical" href="{url}">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="{pg.get('robots', 'index,follow,max-image-preview:large')}">
   <meta name="theme-color" content="#F3F0E8">
   <meta name="author" content="Laís Abreu Arquitetura">
   <meta property="og:locale" content="pt_BR"><meta property="og:type" content="website">
@@ -370,6 +400,6 @@ def render(pg):
 
 if __name__ == '__main__':
     for pg in PAGES:
-        d = ROOT / pg['slug']; d.mkdir(exist_ok=True)
+        d = ROOT / pg['slug']; d.mkdir(parents=True, exist_ok=True)
         (d / 'index.html').write_text(render(pg), encoding='utf-8')
         print('gerado', pg['slug'] + '/index.html')
