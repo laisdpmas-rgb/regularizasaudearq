@@ -244,6 +244,47 @@ dict(
  related=[('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/'), ('Consultórios e clínicas odontológicas', '/projeto-vigilancia-sanitaria-consultorio-odontologico/')],
  sources=[F_EST, F_NT160, F_1002],
 ),
+# ------------------------------------------------------------------ ARQUITETOS
+dict(
+ id='arquitetos', slug='parceria-tecnica-para-arquitetos', track='click_cta_arquitetos', crumb='Para arquitetos',
+ title='Parceria técnica para arquitetos: PBA para Vigilância Sanitária',
+ desc='Arquiteto ou designer com projeto de clínica ou consultório? Eu elaboro o PBA a partir do seu projeto, com memorial, RRT, protocolo e acompanhamento até a primeira manifestação.',
+ h1='Parceria técnica para arquitetos e designers de interiores',
+ nugget='Recebeu o projeto de uma clínica ou consultório e precisa levá-lo à Vigilância Sanitária? Eu elaboro o PBA a partir do seu projeto e aponto o que precisa mudar, para você não perder o cliente nem refazer obra.',
+ cta1='Conversar sobre um projeto', cta_mid='Tem um projeto de saúde em mãos', cta_mid_btn='Conversar sobre parceria', cta_end='Conversar sobre parceria técnica',
+ msg='Olá! Vim pelo site do Regulariza Saúde ARQ. Sou arquiteto(a) ou designer e gostaria de conversar sobre parceria técnica em um projeto de saúde.\n\nCidade/UF: ',
+ service='Parceria técnica para arquitetos: PBA a partir do projeto existente',
+ service_desc='Elaboração do Projeto Básico de Arquitetura (PBA) a partir do projeto do arquiteto ou designer, com memorial descritivo, RRT, protocolo e acompanhamento até a primeira manifestação da Vigilância Sanitária, com atendimento remoto.',
+ sections=[
+  ('Por que projeto de saúde pede um olhar à parte',
+   p('Projeto de clínica ou consultório precisa responder às normas sanitárias, como a RDC 50 da Anvisa, e às regras do órgão local: fluxos limpos e sujos, barreiras físicas, pontos de água, ventilação, revestimentos laváveis e memorial descritivo próprio.')
+   + p('Se você recebeu um pedido assim, não precisa recusar o cliente nem arriscar retrabalho na obra. Eu cuido da parte sanitária, e o seu projeto e a sua identidade continuam sendo o ponto de partida.')),
+  ('O que eu faço a partir do seu projeto',
+   ul(['Diagnóstico do projeto, da atividade e do município, para apontar o que precisa mudar.',
+       'Elaboração do Projeto Básico de Arquitetura (PBA) a partir do seu projeto.',
+       'Memorial Descritivo Sanitário e Memorial de Atividades, conforme o processo.',
+       'Registro do RRT no CAU em meu nome, porque assumo a responsabilidade técnica pelo PBA.',
+       'Protocolo na Vigilância Sanitária e acompanhamento até a primeira manifestação do órgão, incluídos no serviço.'])
+   + FORA, 'cta'),
+  ('Como funciona',
+   ol(['Você me conta o tipo de estabelecimento, a cidade e envia o projeto que já tem.',
+       'Eu faço o diagnóstico e aponto o que precisa mudar.',
+       'Você recebe por escrito o que será feito, o prazo do meu trabalho e o valor.',
+       'Eu elaboro o PBA e a documentação, como combinado na proposta.',
+       'Eu faço o protocolo e acompanho até a primeira manifestação da Vigilância Sanitária.'])
+   + p('Se a Vigilância apontar exigências, respondo a cada uma e ajusto o projeto e a documentação. Esse serviço é à parte, com valor combinado em proposta. Não há garantia de aprovação nem de prazo, porque a análise e a decisão são do órgão.')),
+ ],
+ faq=[
+  ('Preciso refazer o meu projeto?', 'Não necessariamente. Eu parto do projeto que você já tem e aponto o que precisa mudar para atender às normas sanitárias. O que mudar, e como, fica combinado com você.'),
+  ('Quem assume a responsabilidade técnica do PBA?', 'Eu. Registro o RRT no CAU em meu nome, porque assumo a responsabilidade técnica pelo PBA.'),
+  ('Posso contratar só o diagnóstico?', 'Sim. O diagnóstico aponta o que precisa mudar antes de elaborar o PBA. Se você contratar o PBA em seguida, o valor do diagnóstico pode ser abatido, nas condições da proposta.'),
+  ('Quanto custa?', 'O valor é definido por orçamento, depois que eu conheço o projeto, a atividade e o município. Você recebe por escrito, antes de começar.'),
+  ('A Vigilância Sanitária pediu exigências. Quem responde?', 'Eu respondo às exigências e ajusto o projeto e a documentação. É um serviço à parte, com valor combinado em proposta, e não é possível garantir a aprovação.'),
+  ('Você atende fora da minha cidade?', 'Sim. O atendimento é remoto, em todo o Brasil. O que muda de um município para outro são as exigências do órgão sanitário local, que eu confiro no diagnóstico.'),
+ ],
+ related=[('Projeto Básico de Arquitetura (PBA)', '/projeto-basico-de-arquitetura-pba/'), ('Vigilância Sanitária em Minas Gerais', '/projeto-arquitetonico-vigilancia-sanitaria-mg/')],
+ sources=[F_NT160, F_1002],
+),
 ]
 
 # ---------------------------------------------------------------------------------------------
@@ -253,9 +294,9 @@ def wa_link(cls, label, pg, loc):
     return (f'<a class="{cls} whatsapp-link" href="{wa_url(pg["msg"])}" data-message="{escape(pg["msg"])}" '
             f'data-track="{pg["track"]}" data-cta-location="{loc}" target="_blank" rel="noopener noreferrer">{label}</a>')
 
-HEADER = '''<header class="topbar"><div class="wrap nav"><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-verde.svg" alt="" width="164" height="44"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menu">☰ Menu</button><nav class="navlinks" id="navlinks" aria-label="Navegação principal"><a href="/#servicos">Serviços</a><a href="/#parcerias">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a><a class="btn btn-primary mobile-cta" href="#contato">Solicitar avaliação</a></nav>{cta}</div></header>'''
+HEADER = '''<header class="topbar"><div class="wrap nav"><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-verde.svg" alt="" width="164" height="44"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Abrir menu">☰ Menu</button><nav class="navlinks" id="navlinks" aria-label="Navegação principal"><a href="/#servicos">Serviços</a><a href="/parceria-tecnica-para-arquitetos/">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a><a class="btn btn-primary mobile-cta" href="#contato">Solicitar avaliação</a></nav>{cta}</div></header>'''
 
-FOOTER = '''<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-claro.svg" alt="" width="164" height="44" loading="lazy"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><p>Projetos arquitetônicos para regularização sanitária de estabelecimentos de saúde. Atendimento remoto em todo o Brasil.</p></div><nav class="footer-links" aria-label="Links do rodapé"><a href="/#servicos">Serviços</a><a href="/#parcerias">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a></nav></div><nav class="footer-links footer-guides" aria-label="Guias"><a href="/projeto-basico-de-arquitetura-pba/">PBA</a><a href="/laudo-tecnico-de-avaliacao-lta-sao-paulo/">LTA em São Paulo</a><a href="/projeto-arquitetonico-vigilancia-sanitaria-mg/">Minas Gerais</a><a href="/projeto-vigilancia-sanitaria-consultorio-odontologico/">Odontologia</a><a href="/projeto-vigilancia-sanitaria-clinica-estetica/">Estética</a></nav><div class="footer-bottom"><span>© <span id="year"></span> Laís Abreu Arquitetura LTDA, CNPJ 53.427.967/0001-10, Regulariza Saúde, CAU nº A263615-8</span><span>Contato via WhatsApp, <a href="/privacidade.html">Política de Privacidade</a>, <button type="button" class="link-btn" data-cookies>Gerenciar cookies</button></span></div></div></footer>'''
+FOOTER = '''<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="/" aria-label="Regulariza Saúde — um serviço de Laís Abreu Arquitetura, início"><img class="brand-logo" src="/assets/logo/regulariza-saude-claro.svg" alt="" width="164" height="44" loading="lazy"><span class="brand-by">Um serviço de<br>Laís Abreu Arquitetura</span></a><p>Projetos arquitetônicos para regularização sanitária de estabelecimentos de saúde. Atendimento remoto em todo o Brasil.</p></div><nav class="footer-links" aria-label="Links do rodapé"><a href="/#servicos">Serviços</a><a href="/parceria-tecnica-para-arquitetos/">Para Arquitetos</a><a href="/#processo">Como funciona</a><a href="/#sobre">Sobre</a><a href="/#faq">Dúvidas frequentes</a></nav></div><nav class="footer-links footer-guides" aria-label="Guias"><a href="/parceria-tecnica-para-arquitetos/">Arquitetos</a><a href="/projeto-basico-de-arquitetura-pba/">PBA</a><a href="/laudo-tecnico-de-avaliacao-lta-sao-paulo/">LTA em São Paulo</a><a href="/projeto-arquitetonico-vigilancia-sanitaria-mg/">Minas Gerais</a><a href="/projeto-vigilancia-sanitaria-consultorio-odontologico/">Odontologia</a><a href="/projeto-vigilancia-sanitaria-clinica-estetica/">Estética</a></nav><div class="footer-bottom"><span>© <span id="year"></span> Laís Abreu Arquitetura LTDA, CNPJ 53.427.967/0001-10, Regulariza Saúde, CAU nº A263615-8</span><span>Contato via WhatsApp, <a href="/privacidade.html">Política de Privacidade</a>, <button type="button" class="link-btn" data-cookies>Gerenciar cookies</button></span></div></div></footer>'''
 
 def jsonld(pg, url):
     graph = [
